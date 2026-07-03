@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Boraline | Correr com coração</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     *{
@@ -18,73 +17,156 @@
     body{
       background:#F8F7F4;
       color:#2E2E2E;
-      font-family:Georgia, serif;
+      font-family:Inter, sans-serif;
+      line-height:1.6;
+    }
+
+    /* HERO */
+    .hero{
+      height:100vh;
       display:flex;
+      flex-direction:column;
       justify-content:center;
       align-items:center;
-      min-height:100vh;
       text-align:center;
       padding:40px;
+      background:linear-gradient(to bottom, #F8F7F4, #EEF0EA);
     }
 
-    .container{
-      max-width:800px;
-    }
-
-    h1{
+    .logo{
+      font-family:"Cormorant Garamond", serif;
       font-size:72px;
+      letter-spacing:6px;
       color:#5E6F5A;
-      margin-bottom:10px;
-      letter-spacing:3px;
     }
 
-    .subtitle{
+    .tagline{
+      margin-top:10px;
+      font-size:20px;
       color:#73866F;
       font-style:italic;
-      font-size:24px;
-      margin-bottom:50px;
     }
 
-    p{
-      font-size:22px;
-      line-height:1.8;
-      margin-bottom:20px;
-    }
-
-    .coming{
-      margin-top:60px;
-      font-size:16px;
+    .menu{
+      margin-top:40px;
+      display:flex;
+      gap:25px;
+      font-size:14px;
       letter-spacing:2px;
-      color:#888;
       text-transform:uppercase;
+      color:#2E2E2E;
+      opacity:0.7;
+    }
+
+    /* MANIFESTO */
+    .manifesto{
+      max-width:700px;
+      margin:120px auto;
+      padding:0 20px;
+      text-align:center;
+    }
+
+    .manifesto h2{
+      font-family:"Cormorant Garamond", serif;
+      font-size:36px;
+      margin-bottom:20px;
+      color:#5E6F5A;
+    }
+
+    .manifesto p{
+      font-size:18px;
+      margin-bottom:15px;
+    }
+
+    /* STATS */
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:20px;
+      max-width:800px;
+      margin:100px auto;
+      text-align:center;
+    }
+
+    .stat{
+      padding:20px;
+    }
+
+    .stat strong{
+      font-size:28px;
+      color:#5E6F5A;
+      display:block;
+    }
+
+    /* FOOTER */
+    footer{
+      text-align:center;
+      padding:80px 20px;
+      font-size:14px;
+      color:#888;
+    }
+
+    footer em{
+      display:block;
+      margin-top:10px;
+      font-style:italic;
+      color:#73866F;
     }
   </style>
-
 </head>
 
 <body>
 
-<div class="container">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="logo">BORALINE</div>
+    <div class="tagline">correr com coração</div>
 
-<h1>BORALINE</h1>
+    <div class="menu">
+      <div>Início</div>
+      <div>Capítulos</div>
+      <div>Mapa</div>
+      <div>Galeria</div>
+      <div>Sobre</div>
+    </div>
+  </section>
 
-<div class="subtitle">
-correr com coração
-</div>
+  <!-- MANIFESTO -->
+  <section class="manifesto">
+    <h2>Não corremos apenas quilômetros.</h2>
+    <p>Corremos para lembrar quem somos quando o mundo desacelera.</p>
+    <p>Cada treino é uma conversa silenciosa com o corpo.</p>
+    <p>Cada prova é um capítulo que não queremos esquecer.</p>
+  </section>
 
-<p>
-Uma corrida nunca é apenas sobre quilômetros.
-</p>
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat">
+      <strong>184</strong>
+      registros
+    </div>
 
-<p>
-É sobre as histórias que levamos para casa.
-</p>
+    <div class="stat">
+      <strong>42</strong>
+      provas
+    </div>
 
-<div class="coming">
-Primeira versão em construção.
-</div>
+    <div class="stat">
+      <strong>3</strong>
+      países
+    </div>
 
-</div>
+    <div class="stat">
+      <strong>15.270</strong>
+      km
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    BORALINE
+    <em>correr com coração</em>
+  </footer>
 
 </body>
 </html>
