@@ -1,265 +1,248 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Boraline | correr com coração</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Inter,sans-serif;
-background:#F8F7F4;
-color:#2E2E2E;
-}
-
-/* HERO */
-
-.hero{
-
-height:100vh;
-
-background-image:url("hero.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-position:relative;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-overflow:hidden;
-
-}
-
-/* overlay */
-
-.hero::before{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:rgba(0,0,0,.30);
-
-}
-
-/* conteúdo */
-
-.hero-content{
-
-position:relative;
-
-z-index:2;
-
-text-align:center;
-
-color:white;
-
-padding:30px;
-
-}
-
-.logo{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:90px;
-
-letter-spacing:8px;
-
-font-weight:500;
-
-}
-
-.tagline{
-
-margin-top:18px;
-
-font-size:22px;
-
-letter-spacing:4px;
-
-font-weight:300;
-
-}
-
-.scroll{
-
-margin-top:90px;
-
-font-size:14px;
-
-letter-spacing:3px;
-
-text-transform:uppercase;
-
-opacity:.85;
-
-}
-
-/* manifesto */
-
-.manifesto{
-
-max-width:900px;
-
-margin:120px auto;
-
-padding:0 40px;
-
-text-align:center;
-
-}
-
-.manifesto h2{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:52px;
-
-color:#5E6F5A;
-
-margin-bottom:30px;
-
-}
-
-.manifesto p{
-
-font-size:22px;
-
-line-height:1.8;
-
-margin-bottom:18px;
-
-}
-
-footer{
-
-margin-top:140px;
-
-padding:60px;
-
-text-align:center;
-
-background:#5E6F5A;
-
-color:white;
-
-}
-
-footer em{
-
-display:block;
-
-margin-top:10px;
-
-font-style:normal;
-
-letter-spacing:2px;
-
-font-size:14px;
-
-opacity:.8;
-
-}
-
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Boraline | correr com coração</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #F8F7F4;
+      color: #2E2E2E;
+      font-family: "Inter", sans-serif;
+    }
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      background-image: url("hero.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      margin-top: 90px;
+      padding: 24px;
+    }
+
+    .mountain {
+      width: 110px;
+      height: 42px;
+      margin: 0 auto 22px;
+    }
+
+    .mountain svg {
+      width: 100%;
+      height: 100%;
+      stroke: #fff;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0.95;
+    }
+
+    .logo {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 58px;
+      letter-spacing: 14px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .divider {
+      width: 54px;
+      height: 1px;
+      background: #fff;
+      margin: 22px auto 18px;
+      opacity: 0.85;
+    }
+
+    .tagline {
+      font-size: 18px;
+      letter-spacing: 5px;
+      font-weight: 300;
+    }
+
+    .essence {
+      padding: 95px 24px 110px;
+      text-align: center;
+      background: #F8F7F4;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      color: #5E6F5A;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    .essence h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 58px;
+      font-weight: 500;
+      line-height: 1.1;
+      color: #5E6F5A;
+      margin-bottom: 28px;
+    }
+
+    .essence p {
+      max-width: 720px;
+      margin: 0 auto 18px;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #3A3A3A;
+    }
+
+    .chapters {
+      background: #EFECE6;
+      padding: 90px 24px;
+      text-align: center;
+    }
+
+    .chapters h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 44px;
+      color: #5E6F5A;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .chapters p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #555;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #5E6F5A;
+      color: #F8F7F4;
+      text-align: center;
+      padding: 48px 24px;
+      letter-spacing: 4px;
+      font-size: 14px;
+    }
+
+    footer span {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        background-position: center;
+      }
+
+      .hero-content {
+        margin-top: 70px;
+      }
+
+      .logo {
+        font-size: 42px;
+        letter-spacing: 9px;
+      }
+
+      .tagline {
+        font-size: 14px;
+        letter-spacing: 3px;
+      }
+
+      .mountain {
+        width: 90px;
+        margin-bottom: 18px;
+      }
+
+      .essence h1 {
+        font-size: 40px;
+      }
+
+      .essence p {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<section class="hero">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="mountain">
+        <svg viewBox="0 0 120 48" aria-hidden="true">
+          <path d="M8 38 L34 18 L48 30 L72 8 L112 38" />
+          <path d="M38 28 L50 18 L62 28" />
+          <path d="M74 10 L84 27 L94 20 L106 36" />
+        </svg>
+      </div>
 
-<div class="hero-content">
+      <div class="logo">BORALINE</div>
+      <div class="divider"></div>
+      <div class="tagline">correr com coração</div>
+    </div>
+  </section>
 
-<div class="logo">
+  <section class="essence">
+    <div class="eyebrow">A essência</div>
+    <h1>Mais que corridas, memórias.</h1>
+    <p>
+      A Boraline é um espaço para registrar experiências vividas através da corrida:
+      provas, trilhas, viagens, paisagens e histórias que merecem permanecer.
+    </p>
+    <p>
+      Não é sobre velocidade. É sobre presença, caminho e coração.
+    </p>
+  </section>
 
-BORALINE
+  <section class="chapters">
+    <h2>Capítulos em construção</h2>
+    <p>
+      Em breve, cada corrida terá seu próprio capítulo: local, data, distância,
+      fotos e o relato do que ficou pelo caminho.
+    </p>
+  </section>
 
-</div>
-
-<div class="tagline">
-
-correr com coração
-
-</div>
-
-<div class="scroll">
-
-↓ role para começar a jornada
-
-</div>
-
-</div>
-
-</section>
-
-<section class="manifesto">
-
-<h2>
-
-Não corremos apenas quilômetros.
-
-</h2>
-
-<p>
-
-Corremos para guardar histórias.
-
-</p>
-
-<p>
-
-Cada trilha, cada montanha, cada chegada faz parte de uma vida vivida com intensidade.
-
-</p>
-
-<p>
-
-A Boraline existe para que nenhuma dessas histórias se perca.
-
-</p>
-
-</section>
-
-<footer>
-
-BORALINE
-
-<em>
-
-correr com coração
-
-</em>
-
-</footer>
+  <footer>
+    BORALINE
+    <span>correr com coração</span>
+  </footer>
 
 </body>
-
 </html>
