@@ -1,172 +1,265 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Boraline | Correr com coração</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Boraline | correr com coração</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    body{
-      background:#F8F7F4;
-      color:#2E2E2E;
-      font-family:Inter, sans-serif;
-      line-height:1.6;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-    /* HERO */
-    .hero{
-      height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:40px;
-      background:linear-gradient(to bottom, #F8F7F4, #EEF0EA);
-    }
+<style>
 
-    .logo{
-      font-family:"Cormorant Garamond", serif;
-      font-size:72px;
-      letter-spacing:6px;
-      color:#5E6F5A;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .tagline{
-      margin-top:10px;
-      font-size:20px;
-      color:#73866F;
-      font-style:italic;
-    }
+html{
+scroll-behavior:smooth;
+}
 
-    .menu{
-      margin-top:40px;
-      display:flex;
-      gap:25px;
-      font-size:14px;
-      letter-spacing:2px;
-      text-transform:uppercase;
-      color:#2E2E2E;
-      opacity:0.7;
-    }
+body{
+font-family:Inter,sans-serif;
+background:#F8F7F4;
+color:#2E2E2E;
+}
 
-    /* MANIFESTO */
-    .manifesto{
-      max-width:700px;
-      margin:120px auto;
-      padding:0 20px;
-      text-align:center;
-    }
+/* HERO */
 
-    .manifesto h2{
-      font-family:"Cormorant Garamond", serif;
-      font-size:36px;
-      margin-bottom:20px;
-      color:#5E6F5A;
-    }
+.hero{
 
-    .manifesto p{
-      font-size:18px;
-      margin-bottom:15px;
-    }
+height:100vh;
 
-    /* STATS */
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-      gap:20px;
-      max-width:800px;
-      margin:100px auto;
-      text-align:center;
-    }
+background-image:url("herói.jpg");
 
-    .stat{
-      padding:20px;
-    }
+background-size:cover;
 
-    .stat strong{
-      font-size:28px;
-      color:#5E6F5A;
-      display:block;
-    }
+background-position:center;
 
-    /* FOOTER */
-    footer{
-      text-align:center;
-      padding:80px 20px;
-      font-size:14px;
-      color:#888;
-    }
+position:relative;
 
-    footer em{
-      display:block;
-      margin-top:10px;
-      font-style:italic;
-      color:#73866F;
-    }
-  </style>
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+overflow:hidden;
+
+}
+
+/* overlay */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.30);
+
+}
+
+/* conteúdo */
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+text-align:center;
+
+color:white;
+
+padding:30px;
+
+}
+
+.logo{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:90px;
+
+letter-spacing:8px;
+
+font-weight:500;
+
+}
+
+.tagline{
+
+margin-top:18px;
+
+font-size:22px;
+
+letter-spacing:4px;
+
+font-weight:300;
+
+}
+
+.scroll{
+
+margin-top:90px;
+
+font-size:14px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+opacity:.85;
+
+}
+
+/* manifesto */
+
+.manifesto{
+
+max-width:900px;
+
+margin:120px auto;
+
+padding:0 40px;
+
+text-align:center;
+
+}
+
+.manifesto h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:52px;
+
+color:#5E6F5A;
+
+margin-bottom:30px;
+
+}
+
+.manifesto p{
+
+font-size:22px;
+
+line-height:1.8;
+
+margin-bottom:18px;
+
+}
+
+footer{
+
+margin-top:140px;
+
+padding:60px;
+
+text-align:center;
+
+background:#5E6F5A;
+
+color:white;
+
+}
+
+footer em{
+
+display:block;
+
+margin-top:10px;
+
+font-style:normal;
+
+letter-spacing:2px;
+
+font-size:14px;
+
+opacity:.8;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="logo">BORALINE</div>
-    <div class="tagline">correr com coração</div>
+<section class="hero">
 
-    <div class="menu">
-      <div>Início</div>
-      <div>Capítulos</div>
-      <div>Mapa</div>
-      <div>Galeria</div>
-      <div>Sobre</div>
-    </div>
-  </section>
+<div class="hero-content">
 
-  <!-- MANIFESTO -->
-  <section class="manifesto">
-    <h2>Não corremos apenas quilômetros.</h2>
-    <p>Corremos para lembrar quem somos quando o mundo desacelera.</p>
-    <p>Cada treino é uma conversa silenciosa com o corpo.</p>
-    <p>Cada prova é um capítulo que não queremos esquecer.</p>
-  </section>
+<div class="logo">
 
-  <!-- STATS -->
-  <section class="stats">
-    <div class="stat">
-      <strong>184</strong>
-      registros
-    </div>
+BORALINE
 
-    <div class="stat">
-      <strong>42</strong>
-      provas
-    </div>
+</div>
 
-    <div class="stat">
-      <strong>3</strong>
-      países
-    </div>
+<div class="tagline">
 
-    <div class="stat">
-      <strong>15.270</strong>
-      km
-    </div>
-  </section>
+correr com coração
 
-  <!-- FOOTER -->
-  <footer>
-    BORALINE
-    <em>correr com coração</em>
-  </footer>
+</div>
+
+<div class="scroll">
+
+↓ role para começar a jornada
+
+</div>
+
+</div>
+
+</section>
+
+<section class="manifesto">
+
+<h2>
+
+Não corremos apenas quilômetros.
+
+</h2>
+
+<p>
+
+Corremos para guardar histórias.
+
+</p>
+
+<p>
+
+Cada trilha, cada montanha, cada chegada faz parte de uma vida vivida com intensidade.
+
+</p>
+
+<p>
+
+A Boraline existe para que nenhuma dessas histórias se perca.
+
+</p>
+
+</section>
+
+<footer>
+
+BORALINE
+
+<em>
+
+correr com coração
+
+</em>
+
+</footer>
 
 </body>
+
 </html>
