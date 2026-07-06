@@ -7,18 +7,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&family=Allura&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       background: #F8F7F4;
@@ -49,7 +41,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.38);
+      background: rgba(0,0,0,.38);
       z-index: 1;
     }
 
@@ -57,38 +49,36 @@
       position: relative;
       z-index: 2;
       color: white;
-      margin-top: 90px;
+      margin-top: 88px;
       padding: 24px;
       width: 100%;
     }
 
     .logo-wrap {
       display: flex;
-      justify-content: center;
       align-items: flex-end;
-      gap: 6px;
-      color: white;
+      justify-content: center;
+      gap: 8px;
       line-height: 1;
     }
 
     .script {
       font-family: "Allura", cursive;
-      font-size: 98px;
+      font-size: 112px;
       font-weight: 400;
-      letter-spacing: 1px;
     }
 
     .mountain-a {
-      width: 110px;
-      height: 100px;
-      margin: 0 -6px 5px -2px;
+      width: 150px;
+      height: 118px;
+      margin: 0 -6px 4px -4px;
     }
 
     .mountain-a svg {
       width: 100%;
       height: 100%;
       stroke: white;
-      stroke-width: 3.5;
+      stroke-width: 3.2;
       fill: none;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -98,30 +88,28 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 26px;
       margin-top: 12px;
     }
 
     .tagline-line::before,
     .tagline-line::after {
       content: "";
-      width: 64px;
+      width: 70px;
       height: 1px;
-      background: rgba(255,255,255,.8);
+      background: rgba(255,255,255,.82);
     }
 
     .tagline {
       font-family: "Cormorant Garamond", serif;
       font-size: 22px;
-      letter-spacing: 7px;
-      font-weight: 400;
+      letter-spacing: 8px;
       color: rgba(255,255,255,.95);
     }
 
     .essence {
       padding: 100px 24px 110px;
       text-align: center;
-      background: #F8F7F4;
     }
 
     .eyebrow {
@@ -190,17 +178,15 @@
     }
 
     @media (max-width: 768px) {
-      .hero-content {
-        margin-top: 80px;
-      }
+      .hero-content { margin-top: 78px; }
 
       .script {
-        font-size: 66px;
+        font-size: 72px;
       }
 
       .mountain-a {
-        width: 76px;
-        height: 78px;
+        width: 95px;
+        height: 82px;
         margin-bottom: 2px;
       }
 
@@ -237,10 +223,11 @@
         <span class="script">bor</span>
 
         <span class="mountain-a">
-          <svg viewBox="0 0 120 120" aria-hidden="true">
-            <path d="M10 102 C28 92 38 60 60 12 C76 52 90 84 110 100" />
-            <path d="M37 82 C48 70 54 58 62 46 C70 60 78 72 90 84" />
-            <path d="M47 76 L60 63 L72 76" />
+          <svg viewBox="0 0 160 130" aria-hidden="true">
+            <path d="M8 116 C30 108 48 72 80 14 C104 66 122 96 152 114" />
+            <path d="M48 94 C61 80 70 63 82 45 C94 66 108 82 126 96" />
+            <path d="M62 84 L80 66 L99 84" />
+            <path d="M86 46 C101 58 111 67 124 78" />
           </svg>
         </span>
 
@@ -280,3 +267,4 @@
 
 </body>
 </html>
+  
