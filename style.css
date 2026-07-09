@@ -1,143 +1,225 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-  background: #F8F7F4;
-  color: #2E2E2E;
-  font-family: "Inter", sans-serif;
+html{
+    scroll-behavior:smooth;
 }
 
-.hero {
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  overflow: hidden;
-  background: #000;
+body{
+    font-family:"Inter",sans-serif;
+    background:#F8F7F4;
+    color:#2E2E2E;
 }
 
-.hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* ========================= */
+/* HERO                      */
+/* ========================= */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.38);
-  z-index: 1;
+.hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  margin-top: 82px;
-  width: 100%;
-  text-align: center;
-  padding: 24px;
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.38);
+    z-index:1;
 }
 
-.logo-img {
-  width: 540px;
-  max-width: 82vw;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:70px;
 }
 
-.essence {
-  padding: 100px 24px 110px;
-  text-align: center;
+/* ========================= */
+/* LOGO                      */
+/* ========================= */
+
+.logo-img{
+
+    width:300px;
+
+    max-width:65vw;
+
+    height:auto;
+
+    display:block;
+
+    transition:.4s;
+
 }
 
-.eyebrow {
-  font-size: 13px;
-  letter-spacing: 7px;
-  text-transform: uppercase;
-  color: #5E6F5A;
-  font-weight: 600;
-  margin-bottom: 22px;
+/* ========================= */
+/* ESSÊNCIA                  */
+/* ========================= */
+
+.essence{
+
+    padding:110px 30px;
+
+    text-align:center;
+
 }
 
-.essence h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 58px;
-  font-weight: 500;
-  color: #5E6F5A;
-  margin-bottom: 28px;
-  line-height: 1.1;
+.eyebrow{
+
+    font-size:13px;
+
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+    color:#5E6F5A;
+
+    margin-bottom:22px;
+
 }
 
-.essence p {
-  max-width: 720px;
-  margin: 0 auto 18px;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #3A3A3A;
+.essence h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:58px;
+
+    color:#5E6F5A;
+
+    font-weight:500;
+
+    margin-bottom:28px;
+
 }
 
-.chapters {
-  background: #EFECE6;
-  padding: 90px 24px;
-  text-align: center;
+.essence p{
+
+    max-width:760px;
+
+    margin:0 auto 18px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
 }
 
-.chapters h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 44px;
-  color: #5E6F5A;
-  font-weight: 500;
-  margin-bottom: 16px;
+/* ========================= */
+/* CAPÍTULOS                 */
+/* ========================= */
+
+.chapters{
+
+    background:#EFECE6;
+
+    padding:90px 30px;
+
+    text-align:center;
+
 }
 
-.chapters p {
-  max-width: 620px;
-  margin: 0 auto;
-  color: #555;
-  font-size: 16px;
-  line-height: 1.8;
+.chapters h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:46px;
+
+    color:#5E6F5A;
+
+    margin-bottom:20px;
+
 }
 
-footer {
-  background: #5E6F5A;
-  color: #F8F7F4;
-  text-align: center;
-  padding: 48px 24px;
-  letter-spacing: 4px;
-  font-size: 14px;
+.chapters p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+
 }
 
-footer span {
-  display: block;
-  margin-top: 10px;
-  font-size: 12px;
-  letter-spacing: 3px;
-  opacity: .8;
+/* ========================= */
+/* FOOTER                    */
+/* ========================= */
+
+footer{
+
+    background:#5E6F5A;
+
+    color:white;
+
+    text-align:center;
+
+    padding:50px;
+
+    letter-spacing:4px;
+
 }
 
-@media (max-width: 768px) {
-  .hero-content {
-    margin-top: 72px;
-  }
+footer span{
 
-  .logo-img {
-    width: 360px;
-    max-width: 88vw;
-  }
+    display:block;
 
-  .essence h1 {
-    font-size: 40px;
-  }
+    margin-top:12px;
 
-  .essence p {
-    font-size: 16px;
-  }
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    opacity:.75;
+
 }
 
+/* ========================= */
+/* RESPONSIVO                */
+/* ========================= */
+
+@media(max-width:768px){
+
+.hero-content{
+
+    margin-top:55px;
+
+}
+
+.logo-img{
+
+    width:190px;
+
+    max-width:75vw;
+
+}
+
+.essence h1{
+
+    font-size:40px;
+
+}
+
+.essence p{
+
+    font-size:16px;
+
+}
+
+}
