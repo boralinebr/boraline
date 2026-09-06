@@ -140,4 +140,52 @@ footer span {
     font-size: 16px;
   }
 }
+/* MENU */
 
+.top-menu{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+    padding:25px 30px;
+}
+
+.top-menu nav{
+    display:flex;
+    justify-content:center;
+    gap:38px;
+}
+
+.top-menu a{
+    color:#F1E8D8;
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-weight:400;
+}
+
+.top-menu a:hover{
+    opacity:.7;
+}
+
+/* MENU NO CELULAR */
+
+@media(max-width:768px){
+
+    .top-menu{
+        padding:20px 12px;
+    }
+
+    .top-menu nav{
+        gap:15px;
+        flex-wrap:wrap;
+    }
+
+    .top-menu a{
+        font-size:9px;
+        letter-spacing:1px;
+    }
+
+}
