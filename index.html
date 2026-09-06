@@ -11,16 +11,19 @@
 </head>
   
 <script>
-function toggleMenu(){
-    document.getElementById("menuLinks").classList.toggle("open");
-}
+  const menuButton = document.getElementById("menuButton");
+  const menuLinks = document.getElementById("menuLinks");
+
+  menuButton.addEventListener("click", function () {
+    menuLinks.classList.toggle("open");
+  });
 </script>
   
 <body>
   
- <header class="top-menu">
+<header class="top-menu">
 
-  <button class="menu-button" onclick="toggleMenu()" aria-label="Abrir menu">
+  <button class="menu-button" id="menuButton" aria-label="Abrir menu">
     <span></span>
     <span></span>
   </button>
