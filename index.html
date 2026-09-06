@@ -4,23 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boraline | correr com coração</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
-  
-<script>
-  const menuButton = document.getElementById("menuButton");
-  const menuLinks = document.getElementById("menuLinks");
 
-  menuButton.addEventListener("click", function () {
-    menuLinks.classList.toggle("open");
-  });
-</script>
-  
 <body>
-  
+
 <header class="top-menu">
 
   <button class="menu-button" id="menuButton" aria-label="Abrir menu">
@@ -36,46 +30,63 @@
   </nav>
 
 </header>
-  
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline poster="hero.jpg">
-      <source src="hero.mp4" type="video/mp4">
-    </video>
 
-    <div class="hero-overlay"></div>
+<section class="hero">
 
-    <div class="hero-content">
-      <img class="logo-img" src="logo-boraline.png?v=2" alt="Boraline">
-    </div>
-  </section>
+  <video class="hero-video" autoplay muted loop playsinline poster="hero.jpg">
+    <source src="hero.mp4" type="video/mp4">
+  </video>
 
-  <section class="essence">
-    <div class="eyebrow">A essência</div>
-    <h1>Mais que corridas, memórias.</h1>
-    <p>
-      Esse é um espaço de experiências vividas por meio da corrida, registradas em capítulos, como num livro:
-      provas, histórias e sentimentos que merecem permanecer. 
-    </p>
-    <p>
-      O sentido, a presença, o caminho e o coração.
-    </p>
-  </section>
+  <div class="hero-overlay"></div>
 
-  <section class="chapters">
-    <h2>Capítulos em construção</h2>
-    <p>
-      Em breve, cada corrida terá seu próprio capítulo: local, data, distância,
-      fotos e o relato do que ficou pelo caminho.
-    </p>
-  </section>
+  <div class="hero-content">
+    <img class="logo-img" src="logo-boraline.png?v=2" alt="Boraline">
+  </div>
 
-  <footer>
-    BORALINE
-    <span>correr com coração</span>
-  </footer>
+</section>
+
+<section class="essence">
+
+  <div class="eyebrow">A essência</div>
+
+  <h1>Mais que corridas, memórias.</h1>
+
+  <p>
+    Esse é um espaço de experiências vividas por meio da corrida, registradas em capítulos, como num livro:
+    provas, histórias e sentimentos que merecem permanecer.
+  </p>
+
+  <p>
+    O sentido, a presença, o caminho e o coração.
+  </p>
+
+</section>
+
+<section class="chapters">
+
+  <h2>Capítulos em construção</h2>
+
+  <p>
+    Em breve, cada corrida terá seu próprio capítulo: local, data, distância,
+    fotos e o relato do que ficou pelo caminho.
+  </p>
+
+</section>
+
+<footer>
+  BORALINE
+  <span>correr com coração</span>
+</footer>
+
+
+<script>
+  const menuButton = document.getElementById("menuButton");
+  const menuLinks = document.getElementById("menuLinks");
+
+  menuButton.addEventListener("click", function () {
+    menuLinks.classList.toggle("open");
+  });
+</script>
+
 </body>
 </html>
-
-    
-    
-  
