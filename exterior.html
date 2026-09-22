@@ -131,21 +131,22 @@
     }
 
 
-    /*
-      IMPORTANTE:
-      A imagem mantém sua proporção original.
-      Não existe altura fixa.
-      Não existe object-fit: cover.
-      Portanto, a foto NÃO será cortada.
-    */
+    /* =========================
+       FOTOGRAFIAS — DESKTOP
+       
+       Todas ocupam a mesma área.
+       A foto inteira é preservada.
+       Nenhuma parte é cortada.
+    ========================= */
 
     .memory-card img {
       display: block;
 
       width: 100%;
-      height: auto;
+      height: 555px;
 
-      max-width: 100%;
+      object-fit: contain;
+      object-position: center bottom;
 
       margin: 0 0 12px 0;
     }
@@ -232,6 +233,11 @@
         gap: 38px 22px;
       }
 
+      .memory-card img {
+        height: auto;
+        object-fit: initial;
+      }
+
     }
 
 
@@ -281,6 +287,13 @@
         gap: 40px;
       }
 
+      .memory-card img {
+        width: 100%;
+        height: auto;
+        object-fit: initial;
+        margin-bottom: 12px;
+      }
+
       .memory-info h2 {
         font-size: 22px;
       }
@@ -299,7 +312,9 @@
 <body>
 
 
-  <!-- CABEÇALHO -->
+  <!-- =========================
+       CABEÇALHO
+  ========================== -->
 
   <header class="album-header">
 
@@ -340,7 +355,9 @@
 
 
 
-  <!-- GALERIA -->
+  <!-- =========================
+       GALERIA
+  ========================== -->
 
   <main class="album-grid">
 
@@ -523,7 +540,9 @@
 
 
 
-  <!-- RODAPÉ -->
+  <!-- =========================
+       RODAPÉ
+  ========================== -->
 
   <footer>
 
