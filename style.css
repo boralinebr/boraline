@@ -322,3 +322,76 @@ footer span {
     }
 
 }
+/* ========================================
+   ÁLBUNS BORALINE
+   Fotos em proporção original
+======================================== */
+
+.memories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 30px 80px;
+  align-items: start;
+}
+
+.memory-card {
+  width: 100%;
+  margin: 0;
+}
+
+.memory-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.memory-info {
+  padding: 16px 2px 28px;
+}
+
+.memory-info h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 7px;
+}
+
+.memory-info p {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .memories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 30px 20px 60px;
+  }
+
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+  .memories-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 25px 18px 50px;
+  }
+
+  .memory-info h2 {
+    font-size: 23px;
+  }
+
+}
