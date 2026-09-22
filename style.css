@@ -322,61 +322,72 @@ footer span {
     }
 
 }
-/* ========================================
-   ÁLBUNS BORALINE
-   Fotos em proporção original
-======================================== */
+
+/* =========================================
+   GALERIA BORALINE — FOTOS SEM CORTES
+========================================= */
 
 .memories-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px 30px 80px;
-  align-items: start;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 36px 26px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 30px 80px;
+    align-items: start;
 }
 
 .memory-card {
-  width: 100%;
-  margin: 0;
+    width: 100%;
+    height: auto !important;
+    overflow: visible !important;
+    margin: 0;
 }
 
+/* FOTO — mantém a proporção ORIGINAL */
 .memory-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center center !important;
+
+    aspect-ratio: auto !important;
+
+    position: static !important;
 }
+
+/* TEXTO */
 
 .memory-info {
-  padding: 16px 2px 28px;
+    padding: 12px 0 0;
 }
 
 .memory-info h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 25px;
-  font-weight: 500;
-  line-height: 1.15;
-  margin: 0 0 7px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0 0 6px;
 }
 
 .memory-info p {
-  font-family: "Inter", sans-serif;
-  font-size: 13px;
-  line-height: 1.5;
-  margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* TABLET */
 
 @media (max-width: 900px) {
 
-  .memories-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    padding: 30px 20px 60px;
-  }
+    .memories-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 30px 20px 60px;
+    }
 
 }
 
@@ -384,14 +395,13 @@ footer span {
 
 @media (max-width: 600px) {
 
-  .memories-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 25px 18px 50px;
-  }
+    .memories-grid {
+        grid-template-columns: 1fr;
+        padding: 25px 18px 50px;
+    }
 
-  .memory-info h2 {
-    font-size: 23px;
-  }
+    .memory-info h2 {
+        font-size: 23px;
+    }
 
 }
