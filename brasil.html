@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Experiências Brasil | Boraline</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="album-page">
+
+<header class="album-header">
+
+  <a href="index.html" class="album-logo">boraline</a>
+
+  <button class="menu-button album-menu-button" id="menuButton" aria-label="Abrir menu">
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="menu-links" id="menuLinks">
+    <a href="index.html">Início</a>
+    <a href="brasil.html">Experiências Brasil</a>
+    <a href="exterior.html">Experiências Exterior</a>
+    <a href="capitulos.html">Capítulos</a>
+  </nav>
+
+</header>
+
+
+<main class="album">
+
+  <div class="album-title">
+    <div class="eyebrow">Experiências</div>
+    <h1>Brasil</h1>
+  </div>
+
+
+  <div class="album-grid">
+
+    <article class="race-card">
+      <img src="prova-01.jpg" alt="">
+      <h2>Nome da prova</h2>
+      <p>Local</p>
+      <span>Data</span>
+    </article>
+
+
+    <article class="race-card">
+      <img src="prova-02.jpg" alt="">
+      <h2>Nome da prova</h2>
+      <p>Local</p>
+      <span>Data</span>
+    </article>
+
+
+    <article class="race-card">
+      <img src="prova-03.jpg" alt="">
+      <h2>Nome da prova</h2>
+      <p>Local</p>
+      <span>Data</span>
+    </article>
+
+  </div>
+
+</main>
+
+
+<script>
+  const menuButton = document.getElementById("menuButton");
+  const menuLinks = document.getElementById("menuLinks");
+
+  menuButton.addEventListener("click", function () {
+    menuLinks.classList.toggle("open");
+  });
+</script>
+
+</body>
+</html>
