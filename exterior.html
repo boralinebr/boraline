@@ -138,13 +138,6 @@
       justify-content: center;
     }
 
-
-    /*
-       Este bloco contém FOTO + TEXTO.
-       Os dois terão exatamente a
-       mesma largura.
-    */
-
     .memory-inner {
       width: 100%;
       max-width: 416px;
@@ -152,7 +145,7 @@
 
 
     /* =========================
-       FOTO
+       ÁREA DA FOTO
     ========================= */
 
     .memory-photo {
@@ -164,6 +157,14 @@
       justify-content: center;
     }
 
+
+    /* =========================
+       FOTOGRAFIA
+
+       A foto inteira é preservada.
+       Não há corte.
+    ========================= */
+
     .memory-photo img {
       display: block;
 
@@ -172,6 +173,24 @@
 
       object-fit: contain;
       object-position: center bottom;
+    }
+
+
+    /* =========================
+       CORREÇÃO DAS 3 FOTOS
+       
+       Saara, Tokyo e Chamonix:
+       a borda esquerda da fotografia
+       acompanha a borda esquerda
+       do texto.
+    ========================= */
+
+    .alinhar-esquerda .memory-photo {
+      justify-content: flex-start;
+    }
+
+    .alinhar-esquerda .memory-photo img {
+      object-position: left bottom;
     }
 
 
@@ -268,12 +287,15 @@
 
       .memory-photo {
         height: auto;
+        display: block;
       }
 
       .memory-photo img {
         width: 100%;
         height: auto;
+
         object-fit: initial;
+        object-position: initial;
       }
 
     }
@@ -318,8 +340,14 @@
 
       .album-grid {
         grid-template-columns: 1fr;
+
         padding: 15px 18px 45px;
+
         gap: 40px;
+      }
+
+      .memory-card {
+        display: block;
       }
 
       .memory-inner {
@@ -330,12 +358,18 @@
       .memory-photo {
         width: 100%;
         height: auto;
+
         display: block;
       }
 
       .memory-photo img {
+        display: block;
+
         width: 100%;
         height: auto;
+
+        object-fit: initial;
+        object-position: initial;
       }
 
       .memory-info {
@@ -346,14 +380,23 @@
         font-size: 22px;
       }
 
+      .memory-info p {
+        font-size: 13px;
+      }
+
     }
 
   </style>
+
 </head>
 
 
 <body>
 
+
+  <!-- =========================
+       CABEÇALHO
+  ========================= -->
 
   <header class="album-header">
 
@@ -367,13 +410,16 @@
         MEMÓRIAS PELO MUNDO
       </div>
 
-      <h1>Exterior</h1>
+      <h1>
+        Exterior
+      </h1>
 
       <p>
         Corridas, caminhos e histórias além das fronteiras.
       </p>
 
     </div>
+
 
     <nav class="album-nav">
 
@@ -393,25 +439,33 @@
 
 
 
+  <!-- =========================
+       GALERIA
+  ========================= -->
+
   <main class="album-grid">
 
 
     <!-- MARATHON DES SABLES -->
 
-    <article class="memory-card">
+    <article class="memory-card alinhar-esquerda">
 
       <div class="memory-inner">
 
         <div class="memory-photo">
+
           <img
             src="saara.jpg"
             alt="Marathon Des Sables no Deserto do Saara"
           >
+
         </div>
 
         <div class="memory-info">
 
-          <h2>Marathon Des Sables</h2>
+          <h2>
+            Marathon Des Sables
+          </h2>
 
           <p>
             100 km · Deserto do Saara - Marrocos · 01/2026
@@ -432,15 +486,19 @@
       <div class="memory-inner">
 
         <div class="memory-photo">
+
           <img
             src="londres.jpg"
             alt="London Marathon"
           >
+
         </div>
 
         <div class="memory-info">
 
-          <h2>London Marathon</h2>
+          <h2>
+            London Marathon
+          </h2>
 
           <p>
             42 km · Londres - Inglaterra · 04/2025
@@ -456,20 +514,24 @@
 
     <!-- TOKYO MARATHON -->
 
-    <article class="memory-card">
+    <article class="memory-card alinhar-esquerda">
 
       <div class="memory-inner">
 
         <div class="memory-photo">
+
           <img
             src="tokyo.jpg"
             alt="Tokyo Marathon"
           >
+
         </div>
 
         <div class="memory-info">
 
-          <h2>Tokyo Marathon</h2>
+          <h2>
+            Tokyo Marathon
+          </h2>
 
           <p>
             42 km · Tokyo - Japão · 02/2024
@@ -485,20 +547,24 @@
 
     <!-- OCC UTMB CHAMONIX -->
 
-    <article class="memory-card">
+    <article class="memory-card alinhar-esquerda">
 
       <div class="memory-inner">
 
         <div class="memory-photo">
+
           <img
             src="chamonix.jpg"
             alt="OCC UTMB Chamonix"
           >
+
         </div>
 
         <div class="memory-info">
 
-          <h2>OCC UTMB Chamonix</h2>
+          <h2>
+            OCC UTMB Chamonix
+          </h2>
 
           <p>
             55 km · Chamonix - França · 08/2022
@@ -519,15 +585,19 @@
       <div class="memory-inner">
 
         <div class="memory-photo">
+
           <img
             src="chicago.jpg"
             alt="Chicago Marathon"
           >
+
         </div>
 
         <div class="memory-info">
 
-          <h2>Chicago Marathon</h2>
+          <h2>
+            Chicago Marathon
+          </h2>
 
           <p>
             42 km · Chicago - EUA · 10/2018
@@ -548,15 +618,19 @@
       <div class="memory-inner">
 
         <div class="memory-photo">
+
           <img
             src="berlim.jpg"
             alt="Berlin Marathon"
           >
+
         </div>
 
         <div class="memory-info">
 
-          <h2>Berlin Marathon</h2>
+          <h2>
+            Berlin Marathon
+          </h2>
 
           <p>
             42 km · Berlin - Alemanha · 09/2018
@@ -577,15 +651,19 @@
       <div class="memory-inner">
 
         <div class="memory-photo">
+
           <img
             src="two-oceans.jpg"
             alt="Two Oceans"
           >
+
         </div>
 
         <div class="memory-info">
 
-          <h2>Two Oceans</h2>
+          <h2>
+            Two Oceans
+          </h2>
 
           <p>
             56 km · Cape Town - África do Sul · 04/2014
@@ -602,6 +680,10 @@
 
 
 
+  <!-- =========================
+       RODAPÉ
+  ========================= -->
+
   <footer>
 
     BORALINE
@@ -614,4 +696,5 @@
 
 
 </body>
+
 </html>
