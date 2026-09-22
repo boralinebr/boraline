@@ -17,6 +17,10 @@
 
   <style>
 
+    /* ========================================
+       CONFIGURAÇÕES GERAIS
+    ======================================== */
+
     * {
       margin: 0;
       padding: 0;
@@ -30,9 +34,9 @@
     }
 
 
-    /* =========================
+    /* ========================================
        CABEÇALHO
-    ========================= */
+    ======================================== */
 
     .album-header {
       max-width: 1400px;
@@ -77,9 +81,9 @@
     }
 
 
-    /* =========================
+    /* ========================================
        NAVEGAÇÃO
-    ========================= */
+    ======================================== */
 
     .album-nav {
       position: absolute;
@@ -109,26 +113,32 @@
     }
 
 
-    /* =========================
+    /* ========================================
        GALERIA
-    ========================= */
+    ======================================== */
 
     .album-grid {
+      width: 100%;
       max-width: 1400px;
+
       margin: 0 auto;
       padding: 22px 50px 65px;
 
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
 
-      gap: 42px 26px;
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      column-gap: 26px;
+      row-gap: 48px;
+
       align-items: start;
     }
 
 
-    /* =========================
+    /* ========================================
        CARD
-    ========================= */
+    ======================================== */
 
     .memory-card {
       width: 100%;
@@ -136,111 +146,80 @@
     }
 
 
-    /*
-       ÁREA DA FOTO
+    /* ========================================
+       ÁREA RESERVADA PARA A FOTO
 
-       Todos os cards possuem a mesma
-       altura visual no desktop.
-    */
+       Todas têm exatamente o mesmo tamanho.
+    ======================================== */
 
-    .photo-area {
+    .photo-box {
       width: 100%;
       height: 555px;
 
       display: flex;
-      align-items: flex-end;
+
       justify-content: center;
+      align-items: flex-end;
+
+      overflow: hidden;
     }
 
 
-    /*
+    /* ========================================
        FOTO
 
-       A fotografia inteira aparece.
-       Não há corte.
-    */
+       contain = mostra a fotografia inteira.
+       Não corta cabeça, pés ou laterais.
+    ======================================== */
 
-    .photo-area img {
+    .photo-box img {
       display: block;
 
-      width: auto;
-      height: auto;
-
-      max-width: 100%;
-      max-height: 555px;
-    }
-
-
-    /*
-       CONTEÚDO DO CARD
-
-       Nas fotografias verticais,
-       texto e fotografia terão a
-       mesma largura visual.
-    */
-
-    .card-content {
       width: 100%;
-    }
+      height: 100%;
 
-
-    /* FOTOS VERTICAIS */
-
-    .memory-card.vertical .card-content {
-      width: auto;
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-
-    /*
-       Para as fotos verticais deste álbum,
-       esta largura acompanha aproximadamente
-       a largura da fotografia exibida.
-    */
-
-    .memory-card.vertical .photo-area img,
-    .memory-card.vertical .card-content {
-      width: 100%;
-      max-width: 416px;
-    }
-
-    .memory-card.vertical .photo-area img {
-      height: 555px;
       object-fit: contain;
+      object-position: center bottom;
     }
 
 
-    /* =========================
-       TEXTO DOS CARDS
-    ========================= */
+    /* ========================================
+       TEXTO
+
+       Sempre começa exatamente na borda
+       esquerda da COLUNA, independentemente
+       da proporção da fotografia.
+    ======================================== */
 
     .memory-info {
+      width: 100%;
       padding-top: 12px;
+
+      text-align: left;
     }
 
     .memory-info h2 {
+      margin: 0 0 5px 0;
+
       font-size: 21px;
       font-weight: 600;
       line-height: 1.15;
-
-      margin: 0 0 5px;
     }
 
     .memory-info p {
+      margin: 0;
+
       font-family: "Inter", sans-serif;
       font-size: 13px;
       line-height: 1.5;
 
       color: #555;
-      margin: 0;
     }
 
 
-    /* =========================
+    /* ========================================
        RODAPÉ
-    ========================= */
+    ======================================== */
 
     footer {
       max-width: 1300px;
@@ -270,9 +249,9 @@
     }
 
 
-    /* =========================
+    /* ========================================
        TABLET
-    ========================= */
+    ======================================== */
 
     @media (max-width: 900px) {
 
@@ -289,38 +268,26 @@
       }
 
       .album-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
 
         padding-left: 25px;
         padding-right: 25px;
 
-        gap: 38px 22px;
+        column-gap: 22px;
+        row-gap: 42px;
       }
 
-      .photo-area {
-        height: auto;
-        display: block;
-      }
-
-      .photo-area img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        max-height: none;
-      }
-
-      .memory-card.vertical .photo-area img,
-      .memory-card.vertical .card-content {
-        width: 100%;
-        max-width: none;
+      .photo-box {
+        height: 500px;
       }
 
     }
 
 
-    /* =========================
+    /* ========================================
        CELULAR
-    ========================= */
+    ======================================== */
 
     @media (max-width: 600px) {
 
@@ -331,7 +298,6 @@
       .album-logo {
         left: 20px;
         top: 28px;
-
         font-size: 18px;
       }
 
@@ -356,32 +322,36 @@
         font-size: 16px;
       }
 
+
+      /* Uma foto por linha */
+
       .album-grid {
         grid-template-columns: 1fr;
 
         padding: 15px 18px 45px;
 
-        gap: 40px;
+        row-gap: 40px;
       }
 
-      .photo-area {
+
+      /*
+         No celular retiramos a altura fixa.
+         A foto assume sua proporção natural.
+      */
+
+      .photo-box {
         width: 100%;
         height: auto;
+
         display: block;
+        overflow: visible;
       }
 
-      .photo-area img {
+      .photo-box img {
         width: 100%;
         height: auto;
 
-        max-width: 100%;
-        max-height: none;
-      }
-
-      .memory-card.vertical .photo-area img,
-      .memory-card.vertical .card-content {
-        width: 100%;
-        max-width: none;
+        object-fit: initial;
       }
 
       .memory-info {
@@ -406,9 +376,9 @@
 <body>
 
 
-  <!-- =========================
+  <!-- ========================================
        CABEÇALHO
-  ========================== -->
+  ========================================= -->
 
   <header class="album-header">
 
@@ -422,7 +392,9 @@
         MEMÓRIAS PELO MUNDO
       </div>
 
-      <h1>Exterior</h1>
+      <h1>
+        Exterior
+      </h1>
 
       <p>
         Corridas, caminhos e histórias além das fronteiras.
@@ -449,37 +421,35 @@
 
 
 
-  <!-- =========================
+  <!-- ========================================
        GALERIA
-  ========================== -->
+  ========================================= -->
 
   <main class="album-grid">
 
 
     <!-- MARATHON DES SABLES -->
 
-    <article class="memory-card vertical">
+    <article class="memory-card">
 
-      <div class="photo-area">
+      <div class="photo-box">
+
         <img
           src="saara.jpg"
           alt="Marathon Des Sables no Deserto do Saara"
         >
+
       </div>
 
-      <div class="card-content">
+      <div class="memory-info">
 
-        <div class="memory-info">
+        <h2>
+          Marathon Des Sables
+        </h2>
 
-          <h2>
-            Marathon Des Sables
-          </h2>
-
-          <p>
-            100 km · Deserto do Saara - Marrocos · 01/2026
-          </p>
-
-        </div>
+        <p>
+          100 km · Deserto do Saara - Marrocos · 01/2026
+        </p>
 
       </div>
 
@@ -489,28 +459,26 @@
 
     <!-- LONDON MARATHON -->
 
-    <article class="memory-card vertical">
+    <article class="memory-card">
 
-      <div class="photo-area">
+      <div class="photo-box">
+
         <img
           src="londres.jpg"
           alt="London Marathon"
         >
+
       </div>
 
-      <div class="card-content">
+      <div class="memory-info">
 
-        <div class="memory-info">
+        <h2>
+          London Marathon
+        </h2>
 
-          <h2>
-            London Marathon
-          </h2>
-
-          <p>
-            42 km · Londres - Inglaterra · 04/2025
-          </p>
-
-        </div>
+        <p>
+          42 km · Londres - Inglaterra · 04/2025
+        </p>
 
       </div>
 
@@ -520,28 +488,26 @@
 
     <!-- TOKYO MARATHON -->
 
-    <article class="memory-card vertical">
+    <article class="memory-card">
 
-      <div class="photo-area">
+      <div class="photo-box">
+
         <img
           src="tokyo.jpg"
           alt="Tokyo Marathon"
         >
+
       </div>
 
-      <div class="card-content">
+      <div class="memory-info">
 
-        <div class="memory-info">
+        <h2>
+          Tokyo Marathon
+        </h2>
 
-          <h2>
-            Tokyo Marathon
-          </h2>
-
-          <p>
-            42 km · Tokyo - Japão · 02/2024
-          </p>
-
-        </div>
+        <p>
+          42 km · Tokyo - Japão · 02/2024
+        </p>
 
       </div>
 
@@ -553,26 +519,24 @@
 
     <article class="memory-card">
 
-      <div class="photo-area">
+      <div class="photo-box">
+
         <img
           src="chamonix.jpg"
           alt="OCC UTMB Chamonix"
         >
+
       </div>
 
-      <div class="card-content">
+      <div class="memory-info">
 
-        <div class="memory-info">
+        <h2>
+          OCC UTMB Chamonix
+        </h2>
 
-          <h2>
-            OCC UTMB Chamonix
-          </h2>
-
-          <p>
-            55 km · Chamonix - França · 08/2022
-          </p>
-
-        </div>
+        <p>
+          55 km · Chamonix - França · 08/2022
+        </p>
 
       </div>
 
@@ -584,26 +548,24 @@
 
     <article class="memory-card">
 
-      <div class="photo-area">
+      <div class="photo-box">
+
         <img
           src="chicago.jpg"
           alt="Chicago Marathon"
         >
+
       </div>
 
-      <div class="card-content">
+      <div class="memory-info">
 
-        <div class="memory-info">
+        <h2>
+          Chicago Marathon
+        </h2>
 
-          <h2>
-            Chicago Marathon
-          </h2>
-
-          <p>
-            42 km · Chicago - EUA · 10/2018
-          </p>
-
-        </div>
+        <p>
+          42 km · Chicago - EUA · 10/2018
+        </p>
 
       </div>
 
@@ -615,26 +577,24 @@
 
     <article class="memory-card">
 
-      <div class="photo-area">
+      <div class="photo-box">
+
         <img
           src="berlim.jpg"
           alt="Berlin Marathon"
         >
+
       </div>
 
-      <div class="card-content">
+      <div class="memory-info">
 
-        <div class="memory-info">
+        <h2>
+          Berlin Marathon
+        </h2>
 
-          <h2>
-            Berlin Marathon
-          </h2>
-
-          <p>
-            42 km · Berlin - Alemanha · 09/2018
-          </p>
-
-        </div>
+        <p>
+          42 km · Berlin - Alemanha · 09/2018
+        </p>
 
       </div>
 
@@ -646,26 +606,24 @@
 
     <article class="memory-card">
 
-      <div class="photo-area">
+      <div class="photo-box">
+
         <img
           src="two-oceans.jpg"
           alt="Two Oceans"
         >
+
       </div>
 
-      <div class="card-content">
+      <div class="memory-info">
 
-        <div class="memory-info">
+        <h2>
+          Two Oceans
+        </h2>
 
-          <h2>
-            Two Oceans
-          </h2>
-
-          <p>
-            56 km · Cape Town - África do Sul · 04/2014
-          </p>
-
-        </div>
+        <p>
+          56 km · Cape Town - África do Sul · 04/2014
+        </p>
 
       </div>
 
@@ -676,9 +634,9 @@
 
 
 
-  <!-- =========================
+  <!-- ========================================
        RODAPÉ
-  ========================== -->
+  ========================================= -->
 
   <footer>
 
