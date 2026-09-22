@@ -211,155 +211,91 @@ footer span {
     text-decoration:none;
 }
 /* =========================
-   ÁLBUM DE EXPERIÊNCIAS
+   ÁLBUNS BORALINE
 ========================= */
 
-.album-page{
-    background:#F8F7F4;
+.album-page {
+    background: #F8F7F4;
 }
 
-.album-header{
-    height:100px;
-    display:flex;
-    align-items:center;
-    padding:0 6%;
-    border-bottom:1px solid rgba(94,111,90,.18);
+.album-header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 6%;
+    border-bottom: 1px solid rgba(94,111,90,.18);
 }
 
-.album-logo{
-    font-family:"Cormorant Garamond",serif;
-    font-size:30px;
-    color:#5E6F5A;
-    text-decoration:none;
-    letter-spacing:3px;
+.album-logo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    color: #5E6F5A;
+    text-decoration: none;
+    letter-spacing: 3px;
 }
 
-.album-menu-button{
-    position:fixed;
+.album-menu-button {
+    position: fixed;
 }
 
-.album-menu-button span{
-    background:#5E6F5A;
+.album-menu-button span {
+    background: #5E6F5A;
 }
 
-.album{
-    max-width:1200px;
-    margin:auto;
-    padding:80px 6% 120px;
+.album {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 70px 30px 120px;
 }
 
-.album-title{
-    margin-bottom:60px;
+.album-title {
+    margin-bottom: 50px;
 }
 
-.album-title h1{
-    font-family:"Cormorant Garamond",serif;
-    font-size:70px;
-    font-weight:400;
-    color:#5E6F5A;
-}
-
-.album-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:55px 30px;
-}
-
-.race-card img{
-    width:100%;
-    aspect-ratio:4/5;
-    object-fit:cover;
-    display:block;
-    margin-bottom:20px;
-}
-
-.race-card h2{
-    font-family:"Cormorant Garamond",serif;
-    font-size:25px;
-    font-weight:500;
-    color:#2E2E2E;
-    margin-bottom:5px;
-}
-
-.race-card p{
-    font-size:13px;
-    margin-bottom:5px;
-}
-
-.race-card span{
-    font-size:12px;
-    color:#777;
+.album-title h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 70px;
+    font-weight: 400;
+    color: #5E6F5A;
 }
 
 
-/* CELULAR */
-
-@media(max-width:768px){
-
-    .album-header{
-        height:80px;
-    }
-
-    .album-logo{
-        font-size:25px;
-    }
-
-    .album{
-        padding:55px 22px 90px;
-    }
-
-    .album-title{
-        margin-bottom:40px;
-    }
-
-    .album-title h1{
-        font-size:52px;
-    }
-
-    .album-grid{
-        grid-template-columns:1fr;
-        gap:50px;
-    }
-
-}
-
-/* =========================================
-   GALERIA BORALINE — FOTOS SEM CORTES
-========================================= */
+/* =========================
+   GALERIA
+========================= */
 
 .memories-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 36px 26px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 30px 80px;
+    gap: 45px 26px;
     align-items: start;
 }
 
+
+/* CARD */
+
 .memory-card {
     width: 100%;
-    height: auto !important;
-    overflow: visible !important;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* FOTOGRAFIA
+   NUNCA CORTAR A IMAGEM
+*/
+
+.memory-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
     margin: 0;
 }
 
-/* FOTO — mantém a proporção ORIGINAL */
-.memory-card img {
-    display: block;
-    width: 100% !important;
-    height: auto !important;
-    max-height: none !important;
 
-    object-fit: contain !important;
-    object-position: center center !important;
-
-    aspect-ratio: auto !important;
-
-    position: static !important;
-}
-
-/* TEXTO */
+/* INFORMAÇÕES */
 
 .memory-info {
     padding: 12px 0 0;
@@ -370,6 +306,7 @@ footer span {
     font-size: 24px;
     font-weight: 500;
     line-height: 1.15;
+    color: #2E2E2E;
     margin: 0 0 6px;
 }
 
@@ -377,27 +314,54 @@ footer span {
     font-family: "Inter", sans-serif;
     font-size: 13px;
     line-height: 1.5;
+    color: #555;
     margin: 0;
 }
 
-/* TABLET */
+
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 900px) {
 
     .memories-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        padding: 30px 20px 60px;
+        gap: 35px 22px;
     }
 
 }
 
-/* CELULAR */
+
+/* =========================
+   CELULAR
+========================= */
 
 @media (max-width: 600px) {
 
+    .album-header {
+        height: 80px;
+    }
+
+    .album-logo {
+        font-size: 25px;
+    }
+
+    .album {
+        padding: 45px 18px 80px;
+    }
+
+    .album-title {
+        margin-bottom: 35px;
+    }
+
+    .album-title h1 {
+        font-size: 52px;
+    }
+
     .memories-grid {
         grid-template-columns: 1fr;
-        padding: 25px 18px 50px;
+        gap: 40px;
     }
 
     .memory-info h2 {
