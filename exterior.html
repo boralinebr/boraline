@@ -125,36 +125,100 @@
       align-items: start;
     }
 
+
+    /* =========================
+       CARD
+    ========================= */
+
     .memory-card {
       width: 100%;
       min-width: 0;
     }
 
 
-    /* =========================
-       FOTOGRAFIAS — DESKTOP
-       
-       Todas ocupam a mesma área.
-       A foto inteira é preservada.
-       Nenhuma parte é cortada.
-    ========================= */
+    /*
+       ÁREA DA FOTO
 
-    .memory-card img {
-      display: block;
+       Todos os cards possuem a mesma
+       altura visual no desktop.
+    */
 
+    .photo-area {
       width: 100%;
       height: 555px;
 
-      object-fit: contain;
-      object-position: center bottom;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
 
-      margin: 0 0 12px 0;
+
+    /*
+       FOTO
+
+       A fotografia inteira aparece.
+       Não há corte.
+    */
+
+    .photo-area img {
+      display: block;
+
+      width: auto;
+      height: auto;
+
+      max-width: 100%;
+      max-height: 555px;
+    }
+
+
+    /*
+       CONTEÚDO DO CARD
+
+       Nas fotografias verticais,
+       texto e fotografia terão a
+       mesma largura visual.
+    */
+
+    .card-content {
+      width: 100%;
+    }
+
+
+    /* FOTOS VERTICAIS */
+
+    .memory-card.vertical .card-content {
+      width: auto;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    /*
+       Para as fotos verticais deste álbum,
+       esta largura acompanha aproximadamente
+       a largura da fotografia exibida.
+    */
+
+    .memory-card.vertical .photo-area img,
+    .memory-card.vertical .card-content {
+      width: 100%;
+      max-width: 416px;
+    }
+
+    .memory-card.vertical .photo-area img {
+      height: 555px;
+      object-fit: contain;
     }
 
 
     /* =========================
        TEXTO DOS CARDS
     ========================= */
+
+    .memory-info {
+      padding-top: 12px;
+    }
 
     .memory-info h2 {
       font-size: 21px;
@@ -233,9 +297,22 @@
         gap: 38px 22px;
       }
 
-      .memory-card img {
+      .photo-area {
         height: auto;
-        object-fit: initial;
+        display: block;
+      }
+
+      .photo-area img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: none;
+      }
+
+      .memory-card.vertical .photo-area img,
+      .memory-card.vertical .card-content {
+        width: 100%;
+        max-width: none;
       }
 
     }
@@ -287,11 +364,28 @@
         gap: 40px;
       }
 
-      .memory-card img {
+      .photo-area {
         width: 100%;
         height: auto;
-        object-fit: initial;
-        margin-bottom: 12px;
+        display: block;
+      }
+
+      .photo-area img {
+        width: 100%;
+        height: auto;
+
+        max-width: 100%;
+        max-height: none;
+      }
+
+      .memory-card.vertical .photo-area img,
+      .memory-card.vertical .card-content {
+        width: 100%;
+        max-width: none;
+      }
+
+      .memory-info {
+        padding-top: 12px;
       }
 
       .memory-info h2 {
@@ -362,24 +456,30 @@
   <main class="album-grid">
 
 
-    <!-- 01 — MARATHON DES SABLES -->
+    <!-- MARATHON DES SABLES -->
 
-    <article class="memory-card">
+    <article class="memory-card vertical">
 
-      <img
-        src="saara.jpg"
-        alt="Marathon Des Sables no Deserto do Saara"
-      >
+      <div class="photo-area">
+        <img
+          src="saara.jpg"
+          alt="Marathon Des Sables no Deserto do Saara"
+        >
+      </div>
 
-      <div class="memory-info">
+      <div class="card-content">
 
-        <h2>
-          Marathon Des Sables
-        </h2>
+        <div class="memory-info">
 
-        <p>
-          100 km · Deserto do Saara - Marrocos · 01/2026
-        </p>
+          <h2>
+            Marathon Des Sables
+          </h2>
+
+          <p>
+            100 km · Deserto do Saara - Marrocos · 01/2026
+          </p>
+
+        </div>
 
       </div>
 
@@ -387,24 +487,30 @@
 
 
 
-    <!-- 02 — LONDON MARATHON -->
+    <!-- LONDON MARATHON -->
 
-    <article class="memory-card">
+    <article class="memory-card vertical">
 
-      <img
-        src="londres.jpg"
-        alt="London Marathon"
-      >
+      <div class="photo-area">
+        <img
+          src="londres.jpg"
+          alt="London Marathon"
+        >
+      </div>
 
-      <div class="memory-info">
+      <div class="card-content">
 
-        <h2>
-          London Marathon
-        </h2>
+        <div class="memory-info">
 
-        <p>
-          42 km · Londres - Inglaterra · 04/2025
-        </p>
+          <h2>
+            London Marathon
+          </h2>
+
+          <p>
+            42 km · Londres - Inglaterra · 04/2025
+          </p>
+
+        </div>
 
       </div>
 
@@ -412,24 +518,30 @@
 
 
 
-    <!-- 03 — TOKYO MARATHON -->
+    <!-- TOKYO MARATHON -->
 
-    <article class="memory-card">
+    <article class="memory-card vertical">
 
-      <img
-        src="tokyo.jpg"
-        alt="Tokyo Marathon"
-      >
+      <div class="photo-area">
+        <img
+          src="tokyo.jpg"
+          alt="Tokyo Marathon"
+        >
+      </div>
 
-      <div class="memory-info">
+      <div class="card-content">
 
-        <h2>
-          Tokyo Marathon
-        </h2>
+        <div class="memory-info">
 
-        <p>
-          42 km · Tokyo - Japão · 02/2024
-        </p>
+          <h2>
+            Tokyo Marathon
+          </h2>
+
+          <p>
+            42 km · Tokyo - Japão · 02/2024
+          </p>
+
+        </div>
 
       </div>
 
@@ -437,24 +549,30 @@
 
 
 
-    <!-- 04 — OCC UTMB CHAMONIX -->
+    <!-- OCC UTMB CHAMONIX -->
 
     <article class="memory-card">
 
-      <img
-        src="chamonix.jpg"
-        alt="OCC UTMB Chamonix"
-      >
+      <div class="photo-area">
+        <img
+          src="chamonix.jpg"
+          alt="OCC UTMB Chamonix"
+        >
+      </div>
 
-      <div class="memory-info">
+      <div class="card-content">
 
-        <h2>
-          OCC UTMB Chamonix
-        </h2>
+        <div class="memory-info">
 
-        <p>
-          55 km · Chamonix - França · 08/2022
-        </p>
+          <h2>
+            OCC UTMB Chamonix
+          </h2>
+
+          <p>
+            55 km · Chamonix - França · 08/2022
+          </p>
+
+        </div>
 
       </div>
 
@@ -462,24 +580,30 @@
 
 
 
-    <!-- 05 — CHICAGO MARATHON -->
+    <!-- CHICAGO MARATHON -->
 
     <article class="memory-card">
 
-      <img
-        src="chicago.jpg"
-        alt="Chicago Marathon"
-      >
+      <div class="photo-area">
+        <img
+          src="chicago.jpg"
+          alt="Chicago Marathon"
+        >
+      </div>
 
-      <div class="memory-info">
+      <div class="card-content">
 
-        <h2>
-          Chicago Marathon
-        </h2>
+        <div class="memory-info">
 
-        <p>
-          42 km · Chicago - EUA · 10/2018
-        </p>
+          <h2>
+            Chicago Marathon
+          </h2>
+
+          <p>
+            42 km · Chicago - EUA · 10/2018
+          </p>
+
+        </div>
 
       </div>
 
@@ -487,24 +611,30 @@
 
 
 
-    <!-- 06 — BERLIN MARATHON -->
+    <!-- BERLIN MARATHON -->
 
     <article class="memory-card">
 
-      <img
-        src="berlim.jpg"
-        alt="Berlin Marathon"
-      >
+      <div class="photo-area">
+        <img
+          src="berlim.jpg"
+          alt="Berlin Marathon"
+        >
+      </div>
 
-      <div class="memory-info">
+      <div class="card-content">
 
-        <h2>
-          Berlin Marathon
-        </h2>
+        <div class="memory-info">
 
-        <p>
-          42 km · Berlin - Alemanha · 09/2018
-        </p>
+          <h2>
+            Berlin Marathon
+          </h2>
+
+          <p>
+            42 km · Berlin - Alemanha · 09/2018
+          </p>
+
+        </div>
 
       </div>
 
@@ -512,24 +642,30 @@
 
 
 
-    <!-- 07 — TWO OCEANS -->
+    <!-- TWO OCEANS -->
 
     <article class="memory-card">
 
-      <img
-        src="two-oceans.jpg"
-        alt="Two Oceans"
-      >
+      <div class="photo-area">
+        <img
+          src="two-oceans.jpg"
+          alt="Two Oceans"
+        >
+      </div>
 
-      <div class="memory-info">
+      <div class="card-content">
 
-        <h2>
-          Two Oceans
-        </h2>
+        <div class="memory-info">
 
-        <p>
-          56 km · Cape Town - África do Sul · 04/2014
-        </p>
+          <h2>
+            Two Oceans
+          </h2>
+
+          <p>
+            56 km · Cape Town - África do Sul · 04/2014
+          </p>
+
+        </div>
 
       </div>
 
