@@ -1,92 +1,326 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>Boraline | correr com coração</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css" />
+
 </head>
+
 
 <body>
 
-<header class="top-menu">
 
-  <button class="menu-button" id="menuButton" aria-label="Abrir menu">
-    <span></span>
-    <span></span>
-  </button>
+  <!-- =========================
+       MENU
+  ========================== -->
 
-  <nav class="menu-links" id="menuLinks">
-    <a href="index.html">início</a>
-    <a href="brasil.html">experiências Brasil</a>
-    <a href="exterior.html">experiências Exterior</a>
-    <a href="capitulos.html">capítulos</a>
-  </nav>
+  <header class="top-menu">
 
-</header>
+    <button
+      class="menu-button"
+      id="menuButton"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
 
-<section class="hero">
+      <span></span>
+      <span></span>
 
-  <video class="hero-video" autoplay muted loop playsinline poster="hero.jpg">
-    <source src="hero.mp4" type="video/mp4">
-  </video>
-
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <img class="logo-img" src="logo-boraline.png?v=2" alt="Boraline">
-  </div>
-
-</section>
-
-<section class="essence">
-
-  <div class="eyebrow">A essência</div>
-
-  <h1>Mais que corridas, memórias.</h1>
-
-  <p>
-    Esse é um espaço de experiências vividas por meio da corrida, registradas em capítulos, como num livro:
-    provas, histórias e sentimentos que merecem permanecer.
-  </p>
-
-  <p>
-    O sentido, a presença, o caminho e o coração.
-  </p>
-
-</section>
-
-<section class="chapters">
-
-  <h2>Capítulos em construção</h2>
-
-  <p>
-    Em breve, cada corrida terá seu próprio capítulo: local, data, distância,
-    fotos e o relato do que ficou pelo caminho.
-  </p>
-
-</section>
-
-<footer>
-  BORALINE
-  <span>correr com coração</span>
-</footer>
+    </button>
 
 
-<script>
-  const menuButton = document.getElementById("menuButton");
-  const menuLinks = document.getElementById("menuLinks");
+    <nav
+      class="menu-links"
+      id="menuLinks"
+    >
 
-  menuButton.addEventListener("click", function () {
-    menuLinks.classList.toggle("open");
-  });
-</script>
+      <a href="index.html">
+        início
+      </a>
+
+      <a href="brasil.html">
+        experiências Brasil
+      </a>
+
+      <a href="exterior.html">
+        experiências Exterior
+      </a>
+
+      <a href="capitulos.html">
+        capítulos
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero">
+
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="hero.jpg"
+    >
+
+      <source
+        src="hero.mp4"
+        type="video/mp4"
+      >
+
+    </video>
+
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+      <img
+        class="logo-img"
+        src="logo-boraline.png?v=2"
+        alt="Boraline"
+      >
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       A ESSÊNCIA
+  ========================== -->
+
+  <section class="essence">
+
+    <div class="eyebrow">
+      A essência
+    </div>
+
+
+    <h1>
+      Mais que corridas, memórias.
+    </h1>
+
+
+    <p>
+      Esse é um espaço de experiências vividas por meio da corrida,
+      registradas em capítulos, como num livro:
+      provas, histórias e sentimentos que merecem permanecer.
+    </p>
+
+
+    <p>
+      O sentido, a presença, o caminho e o coração.
+    </p>
+
+  </section>
+
+
+
+  <!-- =========================
+       EXPERIÊNCIAS
+  ========================== -->
+
+  <section class="experiences">
+
+    <div class="experiences-intro">
+
+      <div class="eyebrow">
+        Experiências
+      </div>
+
+
+      <h2>
+        Diferentes caminhos, a mesma corrida.
+      </h2>
+
+
+      <p>
+        Praia, montanha, deserto ou cidade.
+        No Brasil ou mundo afora, cada terreno muda a paisagem,
+        o desafio e a história. O que permanece é o caminho vivido.
+      </p>
+
+    </div>
+
+
+
+    <div class="experiences-grid">
+
+
+      <!-- SAARA -->
+
+      <figure class="experience-card">
+
+        <div class="experience-photo">
+
+          <img
+            src="saara.jpg"
+            alt="Corrida no Deserto do Saara"
+          >
+
+        </div>
+
+        <figcaption>
+          Deserto do Saara
+          <span>os primeiros 100 km</span>
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- ULTRAMACHO -->
+
+      <figure class="experience-card">
+
+        <div class="experience-photo">
+
+          <img
+            src="ultramacho.jpg"
+            alt="Corrida na Chapada dos Guimarães"
+          >
+
+        </div>
+
+        <figcaption>
+          Chapada dos Guimarães
+          <span>a mais quente</span>
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- LONDRES -->
+
+      <figure class="experience-card">
+
+        <div class="experience-photo">
+
+          <img
+            src="londres.jpg"
+            alt="London Marathon"
+          >
+
+        </div>
+
+        <figcaption>
+          Londres
+          <span>a última na mandala</span>
+        </figcaption>
+
+      </figure>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CAPÍTULOS
+  ========================== -->
+
+  <section class="chapters">
+
+    <h2>
+      Capítulos em construção
+    </h2>
+
+
+    <p>
+      Em breve, cada corrida terá seu próprio capítulo:
+      local, data, distância, fotos e o relato do que ficou pelo caminho.
+    </p>
+
+  </section>
+
+
+
+  <!-- =========================
+       RODAPÉ
+  ========================== -->
+
+  <footer>
+
+    BORALINE
+
+    <span>
+      correr com coração
+    </span>
+
+  </footer>
+
+
+
+  <!-- =========================
+       MENU
+  ========================== -->
+
+  <script>
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const menuLinks =
+      document.getElementById("menuLinks");
+
+
+    menuButton.addEventListener(
+      "click",
+      function () {
+
+        menuLinks.classList.toggle("open");
+
+        const aberto =
+          menuLinks.classList.contains("open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          aberto ? "true" : "false"
+        );
+
+      }
+    );
+
+  </script>
+
 
 </body>
+
 </html>
