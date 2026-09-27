@@ -757,3 +757,19 @@ footer span {
   }
 
 }
+/* CENTRALIZAR LEGENDAS DAS EXPERIÊNCIAS */
+
+.experiences-grid .experience-card {
+  text-align: center !important;
+}
+
+.experiences-grid .experience-card figcaption {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.experiences-grid .experience-card figcaption span {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
