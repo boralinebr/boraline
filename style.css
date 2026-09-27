@@ -1,8 +1,13 @@
+/* =========================
+   CONFIGURAÇÃO GERAL
+========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 body {
   background: #F8F7F4;
@@ -10,313 +15,583 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
   min-height: 100vh;
+
   position: relative;
+
   display: flex;
   align-items: flex-start;
   justify-content: center;
+
   overflow: hidden;
+
   background: #000;
 }
+
 
 .hero-video {
   position: absolute;
   inset: 0;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
+
 
 .hero-overlay {
   position: absolute;
   inset: 0;
+
   background: rgba(0, 0, 0, 0.38);
+
   z-index: 1;
 }
 
+
 .hero-content {
   position: relative;
+
   z-index: 2;
+
   margin-top: 82px;
+
   width: 100%;
+
   text-align: center;
+
   padding: 24px;
 }
+
 
 .logo-img {
   width: 540px;
   max-width: 82vw;
+
   height: auto;
+
   display: block;
+
   margin: 0 auto;
 }
 
+
+
+/* =========================
+   A ESSÊNCIA
+========================= */
+
 .essence {
   padding: 100px 24px 110px;
+
   text-align: center;
 }
+
 
 .eyebrow {
   font-size: 13px;
   letter-spacing: 7px;
+
   text-transform: uppercase;
+
   color: #5E6F5A;
+
   font-weight: 600;
+
   margin-bottom: 22px;
 }
 
+
 .essence h1 {
   font-family: "Cormorant Garamond", serif;
+
   font-size: 58px;
+
   font-weight: 500;
+
   color: #5E6F5A;
+
   margin-bottom: 28px;
+
   line-height: 1.1;
 }
 
+
 .essence p {
   max-width: 720px;
+
   margin: 0 auto 18px;
+
   font-size: 18px;
+
   line-height: 1.8;
+
   color: #3A3A3A;
 }
 
-.chapters {
+
+
+/* =========================
+   EXPERIÊNCIAS
+========================= */
+
+.experiences {
   background: #EFECE6;
-  padding: 90px 24px;
+
+  padding: 95px 40px 105px;
+}
+
+
+.experiences-intro {
+  max-width: 760px;
+
+  margin: 0 auto 55px;
+
   text-align: center;
 }
+
+
+.experiences-intro h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 48px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  color: #5E6F5A;
+
+  margin-bottom: 22px;
+}
+
+
+.experiences-intro p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #4A4A4A;
+}
+
+
+
+/* =========================
+   3 FOTOS
+========================= */
+
+.experiences-grid {
+  width: 100%;
+
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+.experience-card {
+  width: 100%;
+
+  min-width: 0;
+
+  margin: 0;
+}
+
+
+.experience-photo {
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background: #E5E2DC;
+}
+
+
+.experience-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+
+/* =========================
+   LEGENDAS DAS FOTOS
+========================= */
+
+.experience-card figcaption {
+  padding-top: 15px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  color: #2E2E2E;
+}
+
+
+.experience-card figcaption span {
+  display: block;
+
+  margin-top: 5px;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  color: #666;
+}
+
+
+
+/* =========================
+   CAPÍTULOS
+========================= */
+
+.chapters {
+  background: #F8F7F4;
+
+  padding: 90px 24px;
+
+  text-align: center;
+}
+
 
 .chapters h2 {
   font-family: "Cormorant Garamond", serif;
+
   font-size: 44px;
+
   color: #5E6F5A;
+
   font-weight: 500;
+
   margin-bottom: 16px;
 }
 
+
 .chapters p {
   max-width: 620px;
+
   margin: 0 auto;
+
   color: #555;
+
   font-size: 16px;
+
   line-height: 1.8;
 }
 
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
 footer {
   background: #5E6F5A;
+
   color: #F8F7F4;
+
   text-align: center;
+
   padding: 48px 24px;
+
   letter-spacing: 4px;
+
   font-size: 14px;
 }
 
+
 footer span {
   display: block;
+
   margin-top: 10px;
+
   font-size: 12px;
+
   letter-spacing: 3px;
+
   opacity: .8;
 }
 
-@media (max-width: 768px) {
-  .hero-content {
-    margin-top: 72px;
-  }
 
-  .logo-img {
-    width: 360px;
-    max-width: 88vw;
-  }
 
-  .essence h1 {
-    font-size: 40px;
-  }
+/* =========================
+   MENU
+========================= */
 
-  .essence p {
-    font-size: 16px;
-  }
-}
-/* MENU */
+.top-menu {
+  position: absolute;
 
-.top-menu{
-    position:absolute;
-    top:0;
-    right:0;
-    z-index:20;
+  top: 0;
+  right: 0;
+
+  z-index: 20;
 }
 
-.menu-button{
-    position:absolute;
-    top:28px;
-    right:28px;
 
-    width:46px;
-    height:40px;
+.menu-button {
+  position: absolute;
 
-    background:transparent;
-    border:0;
-    cursor:pointer;
+  top: 28px;
+  right: 28px;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    gap:9px;
+  width: 46px;
+  height: 40px;
 
-    z-index:22;
+  background: transparent;
+
+  border: 0;
+
+  cursor: pointer;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  z-index: 22;
 }
 
-.menu-button span{
-    display:block;
-    width:38px;
-    height:1px;
-    background:#E8D9BE;
+
+.menu-button span {
+  display: block;
+
+  width: 38px;
+
+  height: 1px;
+
+  background: #E8D9BE;
 }
 
-/* MENU ABERTO */
 
-.menu-links{
-    position:fixed;
-    top:0;
-    right:0;
 
-    width:280px;
-    height:100vh;
+/* =========================
+   MENU ABERTO
+========================= */
 
-    background:#F8F7F4;
+.menu-links {
+  position: fixed;
 
-    padding:110px 35px;
+  top: 0;
+  right: 0;
 
-    display:flex;
-    flex-direction:column;
-    gap:28px;
+  width: 280px;
 
-    transform:translateX(100%);
-    transition:transform .35s ease;
+  height: 100vh;
 
-    z-index:21;
+  background: #F8F7F4;
+
+  padding: 110px 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 28px;
+
+  transform: translateX(100%);
+
+  transition: transform .35s ease;
+
+  z-index: 21;
 }
 
-.menu-links.open{
-    transform:translateX(0);
+
+.menu-links.open {
+  transform: translateX(0);
 }
 
-.menu-links a{
-    font-family:"Cormorant Garamond",serif;
-    font-size:25px;
-    color:#5E6F5A;
-    text-decoration:none;
+
+.menu-links a {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 25px;
+
+  color: #5E6F5A;
+
+  text-decoration: none;
 }
+
+
+
 /* =========================
    ÁLBUNS BORALINE
 ========================= */
 
 .album-page {
-    background: #F8F7F4;
+  background: #F8F7F4;
 }
+
 
 .album-header {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    padding: 0 6%;
-    border-bottom: 1px solid rgba(94,111,90,.18);
+  height: 100px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 6%;
+
+  border-bottom: 1px solid rgba(94,111,90,.18);
 }
+
 
 .album-logo {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 30px;
-    color: #5E6F5A;
-    text-decoration: none;
-    letter-spacing: 3px;
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 30px;
+
+  color: #5E6F5A;
+
+  text-decoration: none;
+
+  letter-spacing: 3px;
 }
+
 
 .album-menu-button {
-    position: fixed;
+  position: fixed;
 }
+
 
 .album-menu-button span {
-    background: #5E6F5A;
+  background: #5E6F5A;
 }
+
 
 .album {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 70px 30px 120px;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 70px 30px 120px;
 }
+
 
 .album-title {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
+
 .album-title h1 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 70px;
-    font-weight: 400;
-    color: #5E6F5A;
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 70px;
+
+  font-weight: 400;
+
+  color: #5E6F5A;
 }
+
 
 
 /* =========================
-   GALERIA
+   GALERIA DOS ÁLBUNS
 ========================= */
 
 .memories-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 45px 26px;
-    align-items: start;
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 45px 26px;
+
+  align-items: start;
 }
 
-
-/* CARD */
 
 .memory-card {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0;
 }
 
-
-/* FOTOGRAFIA
-   NUNCA CORTAR A IMAGEM
-*/
 
 .memory-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: none;
-    margin: 0;
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  max-width: 100%;
+
+  max-height: none;
+
+  margin: 0;
 }
 
-
-/* INFORMAÇÕES */
 
 .memory-info {
-    padding: 12px 0 0;
+  padding: 12px 0 0;
 }
+
 
 .memory-info h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.15;
-    color: #2E2E2E;
-    margin: 0 0 6px;
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 24px;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+
+  color: #2E2E2E;
+
+  margin: 0 0 6px;
 }
 
+
 .memory-info p {
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    line-height: 1.5;
-    color: #555;
-    margin: 0;
+  font-family: "Inter", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color: #555;
+
+  margin: 0;
 }
+
 
 
 /* =========================
@@ -325,12 +600,14 @@ footer span {
 
 @media (max-width: 900px) {
 
-    .memories-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 35px 22px;
-    }
+  .memories-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 35px 22px;
+  }
 
 }
+
 
 
 /* =========================
@@ -339,33 +616,142 @@ footer span {
 
 @media (max-width: 600px) {
 
-    .album-header {
-        height: 80px;
-    }
+  .hero-content {
+    margin-top: 72px;
+  }
 
-    .album-logo {
-        font-size: 25px;
-    }
 
-    .album {
-        padding: 45px 18px 80px;
-    }
+  .logo-img {
+    width: 360px;
 
-    .album-title {
-        margin-bottom: 35px;
-    }
+    max-width: 88vw;
+  }
 
-    .album-title h1 {
-        font-size: 52px;
-    }
 
-    .memories-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+  .essence {
+    padding: 75px 22px 80px;
+  }
 
-    .memory-info h2 {
-        font-size: 23px;
-    }
+
+  .essence h1 {
+    font-size: 40px;
+  }
+
+
+  .essence p {
+    font-size: 16px;
+  }
+
+
+
+  /* EXPERIÊNCIAS NO CELULAR */
+
+  .experiences {
+    padding: 70px 10px 75px;
+  }
+
+
+  .experiences-intro {
+    margin-bottom: 38px;
+
+    padding: 0 12px;
+  }
+
+
+  .experiences-intro .eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 5px;
+  }
+
+
+  .experiences-intro h2 {
+    font-size: 36px;
+
+    margin-bottom: 18px;
+  }
+
+
+  .experiences-intro p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  /*
+     IMPORTANTE:
+     mesmo no celular permanecem
+     três fotos lado a lado.
+  */
+
+  .experiences-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 6px;
+  }
+
+
+  .experience-photo {
+    aspect-ratio: 3 / 4;
+  }
+
+
+  .experience-card figcaption {
+    padding-top: 9px;
+
+    font-size: 14px;
+
+    line-height: 1.15;
+  }
+
+
+  .experience-card figcaption span {
+    margin-top: 4px;
+
+    font-size: 9px;
+
+    line-height: 1.3;
+  }
+
+
+
+  /* ÁLBUNS */
+
+  .album-header {
+    height: 80px;
+  }
+
+
+  .album-logo {
+    font-size: 25px;
+  }
+
+
+  .album {
+    padding: 45px 18px 80px;
+  }
+
+
+  .album-title {
+    margin-bottom: 35px;
+  }
+
+
+  .album-title h1 {
+    font-size: 52px;
+  }
+
+
+  .memories-grid {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  .memory-info h2 {
+    font-size: 23px;
+  }
 
 }
