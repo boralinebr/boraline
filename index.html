@@ -318,6 +318,28 @@
       }
     );
 
+    // Muda a cor do menu ao sair do vídeo
+
+const hero = document.querySelector(".hero");
+
+function atualizarCorMenu() {
+  const limite = hero.getBoundingClientRect().bottom;
+  const alturaBotao = menuButton.getBoundingClientRect().bottom;
+
+  menuButton.classList.toggle(
+    "menu-scrolled",
+    limite <= alturaBotao
+  );
+}
+
+window.addEventListener("scroll", atualizarCorMenu, {
+  passive: true
+});
+
+window.addEventListener("resize", atualizarCorMenu);
+
+atualizarCorMenu();
+    
   </script>
 
 
