@@ -365,7 +365,7 @@ footer span {
 
 
 .menu-button {
-  position: absolute;
+  position: fixed;
 
   top: 28px;
   right: 28px;
