@@ -777,3 +777,22 @@ footer span {
   width: 100% !important;
   text-align: center !important;
 }
+/* LINKS DAS FOTOS DA HOME */
+
+.experience-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.experience-link figcaption {
+  text-align: center;
+}
+
+.experience-link img {
+  transition: transform 0.4s ease;
+}
+
+.experience-link:hover img {
+  transform: scale(1.04);
+}
