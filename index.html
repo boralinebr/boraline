@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -29,9 +30,7 @@
 
 </head>
 
-
 <body>
-
 
   <!-- =========================
        MENU
@@ -45,12 +44,9 @@
       aria-label="Abrir menu"
       aria-expanded="false"
     >
-
       <span></span>
       <span></span>
-
     </button>
-
 
     <nav
       class="menu-links"
@@ -78,7 +74,6 @@
   </header>
 
 
-
   <!-- =========================
        HERO
   ========================== -->
@@ -93,30 +88,23 @@
       playsinline
       poster="hero.jpg"
     >
-
       <source
         src="hero.mp4"
         type="video/mp4"
       >
-
     </video>
-
 
     <div class="hero-overlay"></div>
 
-
     <div class="hero-content">
-
       <img
         class="logo-img"
         src="logo-boraline.png?v=2"
         alt="Boraline"
       >
-
     </div>
 
   </section>
-
 
 
   <!-- =========================
@@ -129,16 +117,13 @@
       A essência
     </div>
 
-
     <h1>
       Memórias de uma corredora
     </h1>
 
-
     <p>
-      O amor pelos livros e pela corrida em forma de galeria ou de contos: experiências e sentimentos que merecem permanecer.   
+      O amor pelos livros e pela corrida em forma de galeria ou de contos: experiências e sentimentos que merecem permanecer.
     </p>
-
 
     <p>
       O sentido, a presença, o caminho e o coração.
@@ -147,12 +132,10 @@
     <p>
       “Compensar a brevidade da existência com a qualidade e a intensidade das nossas experiências”
 
-                                           Frédéric Lenoir
-
+      Frédéric Lenoir
     </p>
-    
-  </section>
 
+  </section>
 
 
   <!-- =========================
@@ -167,11 +150,9 @@
         Experiências
       </div>
 
-
       <h2>
-        Céus diferentes; chãos desconhecidos 
+        Céus diferentes; chãos desconhecidos
       </h2>
-
 
       <p>
         Praia, montanha, deserto ou cidade.
@@ -182,84 +163,90 @@
     </div>
 
 
+    <!-- GALERIA COM TRÊS FOTOS -->
 
     <div class="experiences-grid">
 
+      <!-- LENÇÓIS MARANHENSES -->
 
-      <div class="experiences-grid">
+      <figure class="experience-card">
 
-  <!-- LENÇÓIS MARANHENSES -->
-
-  <figure class="experience-card">
-
-    <a href="brasil.html" class="experience-link">
-
-      <div class="experience-photo">
-        <img
-          src="2lencois-maranhenses.jpg"
-          alt="Corrida nos Lençóis Maranhenses"
+        <a
+          href="brasil.html#lencois-maranhenses"
+          class="experience-link"
         >
-      </div>
 
-      <figcaption>
-        Lençóis Maranhenses
-        <span>entre dunas e lagoas</span>
-      </figcaption>
+          <div class="experience-photo">
+            <img
+              src="2lencois-maranhenses.jpg"
+              alt="Corrida nos Lençóis Maranhenses"
+            >
+          </div>
 
-    </a>
+          <figcaption>
+            Lençóis Maranhenses
+            <span>entre dunas e lagoas</span>
+          </figcaption>
 
-  </figure>
+        </a>
+
+      </figure>
 
 
-  <!-- ULTRAMACHO -->
+      <!-- ULTRAMACHO -->
 
-  <figure class="experience-card">
+      <figure class="experience-card">
 
-    <a href="brasil.html" class="experience-link">
-
-      <div class="experience-photo">
-        <img
-          src="ultramacho.jpg"
-          alt="Corrida na Chapada dos Guimarães"
+        <a
+          href="brasil.html#ultramacho"
+          class="experience-link"
         >
-      </div>
 
-      <figcaption>
-        Chapada dos Guimarães
-        <span>a mais quente</span>
-      </figcaption>
+          <div class="experience-photo">
+            <img
+              src="ultramacho.jpg"
+              alt="Corrida na Chapada dos Guimarães"
+            >
+          </div>
 
-    </a>
+          <figcaption>
+            Chapada dos Guimarães
+            <span>a mais quente</span>
+          </figcaption>
 
-  </figure>
+        </a>
+
+      </figure>
 
 
-  <!-- LONDRES -->
+      <!-- LONDRES -->
 
-  <figure class="experience-card">
+      <figure class="experience-card">
 
-    <a href="exterior.html" class="experience-link">
-
-      <div class="experience-photo">
-        <img
-          src="londres.jpg"
-          alt="London Marathon"
+        <a
+          href="exterior.html#londres"
+          class="experience-link"
         >
-      </div>
 
-      <figcaption>
-        Londres
-        <span>a última na mandala</span>
-      </figcaption>
+          <div class="experience-photo">
+            <img
+              src="londres.jpg"
+              alt="London Marathon"
+            >
+          </div>
 
-    </a>
+          <figcaption>
+            Londres
+            <span>a última na mandala</span>
+          </figcaption>
 
-  </figure>
+        </a>
 
-</div>
+      </figure>
+
+    </div>
 
   </section>
-
 
 
   <!-- =========================
@@ -272,13 +259,11 @@
       O coração
     </h2>
 
-
     <p>
-      Em forma de contos, trago aqui aquelas que aqueceram meu coração e me trouxeram de volta ao lar. 
+      Em forma de contos, trago aqui aquelas que aqueceram meu coração e me trouxeram de volta ao lar.
     </p>
 
   </section>
-
 
 
   <!-- =========================
@@ -296,7 +281,6 @@
   </footer>
 
 
-
   <!-- =========================
        MENU
   ========================== -->
@@ -308,7 +292,6 @@
 
     const menuLinks =
       document.getElementById("menuLinks");
-
 
     menuButton.addEventListener(
       "click",
@@ -327,31 +310,40 @@
       }
     );
 
+
     // Muda a cor do menu ao sair do vídeo
 
-const hero = document.querySelector(".hero");
+    const hero = document.querySelector(".hero");
 
-function atualizarCorMenu() {
-  const limite = hero.getBoundingClientRect().bottom;
-  const alturaBotao = menuButton.getBoundingClientRect().bottom;
+    function atualizarCorMenu() {
 
-  menuButton.classList.toggle(
-    "menu-scrolled",
-    limite <= alturaBotao
-  );
-}
+      const limite =
+        hero.getBoundingClientRect().bottom;
 
-window.addEventListener("scroll", atualizarCorMenu, {
-  passive: true
-});
+      const alturaBotao =
+        menuButton.getBoundingClientRect().bottom;
 
-window.addEventListener("resize", atualizarCorMenu);
+      menuButton.classList.toggle(
+        "menu-scrolled",
+        limite <= alturaBotao
+      );
 
-atualizarCorMenu();
-    
+    }
+
+    window.addEventListener(
+      "scroll",
+      atualizarCorMenu,
+      { passive: true }
+    );
+
+    window.addEventListener(
+      "resize",
+      atualizarCorMenu
+    );
+
+    atualizarCorMenu();
+
   </script>
 
-
 </body>
-
 </html>
