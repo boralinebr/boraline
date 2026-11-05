@@ -1,0 +1,780 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Capítulos | Boraline</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================
+       CONFIGURAÇÕES GERAIS
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #F8F7F4;
+      color: #2E2E2E;
+      font-family: "Inter", sans-serif;
+    }
+
+    /* =========================
+       MENU
+    ========================== */
+
+    .top-menu {
+      position: relative;
+      z-index: 20;
+    }
+
+    .menu-button {
+      position: fixed;
+      top: 28px;
+      right: 28px;
+      width: 46px;
+      height: 40px;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 9px;
+      z-index: 22;
+    }
+
+    .menu-button span {
+      display: block;
+      width: 38px;
+      height: 1px;
+      background: #5E6F5A;
+    }
+
+    .menu-links {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px;
+      height: 100vh;
+      background: #F8F7F4;
+      padding: 110px 35px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      transform: translateX(100%);
+      transition: transform 0.35s ease;
+      z-index: 21;
+      box-shadow: -8px 0 30px rgba(0,0,0,0.06);
+    }
+
+    .menu-links.open {
+      transform: translateX(0);
+    }
+
+    .menu-links a {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      color: #5E6F5A;
+      text-decoration: none;
+    }
+
+    /* =========================
+       ABERTURA
+    ========================== */
+
+    .page-header {
+      padding: 115px 24px 90px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: #5E6F5A;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .page-header h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 70px;
+      font-weight: 500;
+      color: #5E6F5A;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .page-header p {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    /* =========================
+       CAPÍTULOS
+    ========================== */
+
+    .chapter {
+      padding: 90px 24px 105px;
+      scroll-margin-top: 35px;
+    }
+
+    .chapter:nth-child(even) {
+      background: #EFECE6;
+    }
+
+    .chapter-inner {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .chapter-number {
+      text-align: center;
+      color: #5E6F5A;
+      font-size: 12px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .chapter h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 54px;
+      font-weight: 500;
+      line-height: 1.1;
+      color: #5E6F5A;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .chapter-meta {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #777;
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .chapter-image {
+      display: block;
+      width: 100%;
+      max-height: 650px;
+      object-fit: contain;
+      margin: 0 auto 50px;
+    }
+
+    .chapter-text {
+      max-width: 690px;
+      margin: 0 auto;
+    }
+
+    .chapter-text p {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      line-height: 1.65;
+      color: #343434;
+      margin-bottom: 24px;
+    }
+
+    .chapter-placeholder {
+      text-align: center;
+      font-style: italic;
+      color: #777 !important;
+    }
+
+    /* =========================
+       COMENTÁRIOS
+    ========================== */
+
+    .comments {
+      max-width: 690px;
+      margin: 75px auto 0;
+      padding-top: 35px;
+      border-top: 1px solid #C9C7BD;
+    }
+
+    .comments h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 34px;
+      font-weight: 500;
+      color: #5E6F5A;
+      margin-bottom: 10px;
+    }
+
+    .comments-intro {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .comment-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .comment-form label {
+      font-size: 12px;
+      font-weight: 500;
+      color: #5E6F5A;
+    }
+
+    .comment-form input,
+    .comment-form textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid #D5D2CB;
+      background: #FFFFFF;
+      border-radius: 2px;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      color: #343434;
+    }
+
+    .comment-form textarea {
+      min-height: 135px;
+      resize: vertical;
+    }
+
+    .comment-form input:focus,
+    .comment-form textarea:focus {
+      outline: 1px solid #5E6F5A;
+      border-color: #5E6F5A;
+    }
+
+    .comment-form button {
+      align-self: flex-start;
+      margin-top: 10px;
+      padding: 13px 28px;
+      border: 0;
+      background: #5E6F5A;
+      color: #FFFFFF;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    .comment-form button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .comments-note {
+      margin-top: 18px;
+      font-size: 11px;
+      line-height: 1.7;
+      color: #777;
+    }
+
+    .comments-status {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #777;
+      font-style: italic;
+    }
+
+    .approved-comments {
+      margin-top: 45px;
+    }
+
+    .approved-comments h4 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      font-weight: 500;
+      color: #5E6F5A;
+      margin-bottom: 15px;
+    }
+
+    .approved-comments p {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       RODAPÉ
+    ========================== */
+
+    footer {
+      background: #5E6F5A;
+      color: #F8F7F4;
+      text-align: center;
+      padding: 48px 24px;
+      letter-spacing: 4px;
+      font-size: 14px;
+    }
+
+    footer span {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      opacity: 0.8;
+    }
+
+    /* =========================
+       CELULAR
+    ========================== */
+
+    @media (max-width: 600px) {
+
+      .page-header {
+        padding: 105px 22px 70px;
+      }
+
+      .page-header h1 {
+        font-size: 52px;
+      }
+
+      .page-header p {
+        font-size: 15px;
+      }
+
+      .chapter {
+        padding: 70px 20px 80px;
+      }
+
+      .chapter h2 {
+        font-size: 42px;
+      }
+
+      .chapter-meta {
+        font-size: 12px;
+        margin-bottom: 30px;
+      }
+
+      .chapter-image {
+        margin-bottom: 35px;
+      }
+
+      .chapter-text p {
+        font-size: 22px;
+        line-height: 1.55;
+      }
+
+      .comments {
+        margin-top: 55px;
+      }
+
+      .comments h3 {
+        font-size: 30px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =========================
+       MENU
+  ========================== -->
+
+  <header class="top-menu">
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="menu-links" id="menuLinks">
+      <a href="index.html">início</a>
+      <a href="brasil.html">experiências Brasil</a>
+      <a href="exterior.html">experiências Exterior</a>
+      <a href="capitulos.html">capítulos</a>
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       ABERTURA
+  ========================== -->
+
+  <header class="page-header">
+
+    <div class="eyebrow">
+      BORALINE · CAPÍTULOS
+    </div>
+
+    <h1>O coração</h1>
+
+    <p>
+      Em forma de contos, trago aqui aquelas que aqueceram meu coração e me trouxeram de volta ao lar.
+    </p>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         CAPÍTULO 01
+         DELTA DO PARNAÍBA
+    ========================== -->
+
+    <article class="chapter" id="delta-parnaiba">
+
+      <div class="chapter-inner">
+
+        <div class="chapter-number">
+          Capítulo 01
+        </div>
+
+        <h2>Delta do Parnaíba</h2>
+
+        <div class="chapter-meta">
+          Desafio Delta do Parnaíba · 60 km · Piauí · 11/2025
+        </div>
+
+        <img
+          class="chapter-image"
+          src="2delta-parnaiba.jpg"
+          alt="Desafio Delta do Parnaíba"
+        >
+
+        <div class="chapter-text">
+
+          <p class="chapter-placeholder">
+            Um conto a ser escrito.
+          </p>
+
+        </div>
+
+        <!-- COMENTÁRIOS DO DELTA -->
+
+        <section class="comments" aria-label="Comentários do Delta do Parnaíba">
+
+          <h3>Deixe sua impressão</h3>
+
+          <p class="comments-intro">
+            Sua história também pode fazer parte desta conversa.
+          </p>
+
+          <form class="comment-form" data-chapter="delta-parnaiba">
+
+            <label for="nome-delta">Nome</label>
+
+            <input
+              id="nome-delta"
+              name="nome"
+              type="text"
+              maxlength="80"
+              placeholder="Seu nome"
+              required
+              disabled
+            >
+
+            <label for="comentario-delta">Comentário</label>
+
+            <textarea
+              id="comentario-delta"
+              name="comentario"
+              maxlength="2000"
+              placeholder="Escreva sua impressão sobre o conto..."
+              required
+              disabled
+            ></textarea>
+
+            <button type="submit" disabled>
+              Enviar comentário
+            </button>
+
+          </form>
+
+          <p class="comments-note">
+            Os comentários serão publicados somente após aprovação.
+          </p>
+
+          <p class="comments-status">
+            Comentários em preparação.
+          </p>
+
+          <div class="approved-comments">
+            <h4>Comentários</h4>
+            <p>Este espaço receberá os comentários aprovados.</p>
+          </div>
+
+        </section>
+
+      </div>
+
+    </article>
+
+
+    <!-- =========================
+         CAPÍTULO 02
+         SAARA
+    ========================== -->
+
+    <article class="chapter" id="saara">
+
+      <div class="chapter-inner">
+
+        <div class="chapter-number">
+          Capítulo 02
+        </div>
+
+        <h2>Deserto do Saara</h2>
+
+        <div class="chapter-meta">
+          Marathon des Sables · 100 km · Marrocos · 01/2026
+        </div>
+
+        <img
+          class="chapter-image"
+          src="saara.jpg"
+          alt="Marathon des Sables no Saara"
+        >
+
+        <div class="chapter-text">
+
+          <p class="chapter-placeholder">
+            Um conto a ser escrito.
+          </p>
+
+        </div>
+
+        <!-- COMENTÁRIOS DO SAARA -->
+
+        <section class="comments" aria-label="Comentários do Saara">
+
+          <h3>Deixe sua impressão</h3>
+
+          <p class="comments-intro">
+            Sua história também pode fazer parte desta conversa.
+          </p>
+
+          <form class="comment-form" data-chapter="saara">
+
+            <label for="nome-saara">Nome</label>
+
+            <input
+              id="nome-saara"
+              name="nome"
+              type="text"
+              maxlength="80"
+              placeholder="Seu nome"
+              required
+              disabled
+            >
+
+            <label for="comentario-saara">Comentário</label>
+
+            <textarea
+              id="comentario-saara"
+              name="comentario"
+              maxlength="2000"
+              placeholder="Escreva sua impressão sobre o conto..."
+              required
+              disabled
+            ></textarea>
+
+            <button type="submit" disabled>
+              Enviar comentário
+            </button>
+
+          </form>
+
+          <p class="comments-note">
+            Os comentários serão publicados somente após aprovação.
+          </p>
+
+          <p class="comments-status">
+            Comentários em preparação.
+          </p>
+
+          <div class="approved-comments">
+            <h4>Comentários</h4>
+            <p>Este espaço receberá os comentários aprovados.</p>
+          </div>
+
+        </section>
+
+      </div>
+
+    </article>
+
+
+    <!-- =========================
+         CAPÍTULO 03
+         LA MISION
+    ========================== -->
+
+    <article class="chapter" id="la-mision">
+
+      <div class="chapter-inner">
+
+        <div class="chapter-number">
+          Capítulo 03
+        </div>
+
+        <h2>La Mision</h2>
+
+        <div class="chapter-meta">
+          La Mision · 55 km · Passa Quatro, MG · 08/2026
+        </div>
+
+        <img
+          class="chapter-image"
+          src="2la-mision.jpg"
+          alt="La Mision em Passa Quatro"
+        >
+
+        <div class="chapter-text">
+
+          <p class="chapter-placeholder">
+            Um conto a ser escrito.
+          </p>
+
+        </div>
+
+        <!-- COMENTÁRIOS DA LA MISION -->
+
+        <section class="comments" aria-label="Comentários da La Mision">
+
+          <h3>Deixe sua impressão</h3>
+
+          <p class="comments-intro">
+            Sua história também pode fazer parte desta conversa.
+          </p>
+
+          <form class="comment-form" data-chapter="la-mision">
+
+            <label for="nome-mision">Nome</label>
+
+            <input
+              id="nome-mision"
+              name="nome"
+              type="text"
+              maxlength="80"
+              placeholder="Seu nome"
+              required
+              disabled
+            >
+
+            <label for="comentario-mision">Comentário</label>
+
+            <textarea
+              id="comentario-mision"
+              name="comentario"
+              maxlength="2000"
+              placeholder="Escreva sua impressão sobre o conto..."
+              required
+              disabled
+            ></textarea>
+
+            <button type="submit" disabled>
+              Enviar comentário
+            </button>
+
+          </form>
+
+          <p class="comments-note">
+            Os comentários serão publicados somente após aprovação.
+          </p>
+
+          <p class="comments-status">
+            Comentários em preparação.
+          </p>
+
+          <div class="approved-comments">
+            <h4>Comentários</h4>
+            <p>Este espaço receberá os comentários aprovados.</p>
+          </div>
+
+        </section>
+
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <!-- =========================
+       RODAPÉ
+  ========================== -->
+
+  <footer>
+
+    BORALINE
+
+    <span>
+      correr com coração
+    </span>
+
+  </footer>
+
+
+  <!-- =========================
+       MENU
+  ========================== -->
+
+  <script>
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const menuLinks =
+      document.getElementById("menuLinks");
+
+    menuButton.addEventListener("click", function () {
+
+      menuLinks.classList.toggle("open");
+
+      const aberto =
+        menuLinks.classList.contains("open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        aberto ? "true" : "false"
+      );
+
+    });
+
+  </script>
+
+</body>
+</html>
