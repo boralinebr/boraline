@@ -27,9 +27,7 @@
 
   <style>
 
-    /* =========================
-       CONFIGURAÇÕES GERAIS
-    ========================== */
+    /* CONFIGURAÇÕES GERAIS */
 
     * {
       margin: 0;
@@ -47,9 +45,7 @@
       font-family: "Inter", sans-serif;
     }
 
-    /* =========================
-       MENU
-    ========================== */
+    /* MENU */
 
     .top-menu {
       position: relative;
@@ -107,9 +103,7 @@
       text-decoration: none;
     }
 
-    /* =========================
-       ABERTURA
-    ========================== */
+    /* ABERTURA */
 
     .page-header {
       padding: 115px 24px 90px;
@@ -142,9 +136,7 @@
       color: #555;
     }
 
-    /* =========================
-       CAPÍTULOS
-    ========================== */
+    /* CAPÍTULOS */
 
     .chapter {
       padding: 90px 24px 105px;
@@ -214,40 +206,31 @@
       color: #777 !important;
     }
 
-    /* =========================
-       COMENTÁRIOS
-    ========================== */
+    /* COMENTÁRIOS COMPACTOS */
 
     .comments {
-      max-width: 690px;
-      margin: 75px auto 0;
-      padding-top: 35px;
+      max-width: 380px;
+      margin: 35px auto 0;
+      padding-top: 18px;
       border-top: 1px solid #C9C7BD;
     }
 
     .comments h3 {
       font-family: "Cormorant Garamond", serif;
-      font-size: 34px;
+      font-size: 24px;
       font-weight: 500;
       color: #5E6F5A;
-      margin-bottom: 10px;
-    }
-
-    .comments-intro {
-      font-size: 13px;
-      line-height: 1.7;
-      color: #666;
-      margin-bottom: 30px;
+      margin-bottom: 12px;
     }
 
     .comment-form {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 6px;
     }
 
     .comment-form label {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 500;
       color: #5E6F5A;
     }
@@ -255,35 +238,34 @@
     .comment-form input,
     .comment-form textarea {
       width: 100%;
-      padding: 14px 15px;
+      padding: 8px 10px;
       border: 1px solid #D5D2CB;
       background: #FFFFFF;
       border-radius: 2px;
       font-family: "Inter", sans-serif;
-      font-size: 14px;
+      font-size: 12px;
       color: #343434;
     }
 
-    .comment-form textarea {
-      min-height: 135px;
-      resize: vertical;
+    .comment-form input {
+      height: 34px;
     }
 
-    .comment-form input:focus,
-    .comment-form textarea:focus {
-      outline: 1px solid #5E6F5A;
-      border-color: #5E6F5A;
+    .comment-form textarea {
+      min-height: 60px;
+      height: 60px;
+      resize: vertical;
     }
 
     .comment-form button {
       align-self: flex-start;
-      margin-top: 10px;
-      padding: 13px 28px;
+      margin-top: 4px;
+      padding: 8px 16px;
       border: 0;
       background: #5E6F5A;
       color: #FFFFFF;
       font-family: "Inter", sans-serif;
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 1px;
       cursor: pointer;
     }
@@ -294,40 +276,13 @@
     }
 
     .comments-note {
-      margin-top: 18px;
-      font-size: 11px;
-      line-height: 1.7;
+      margin-top: 10px;
+      font-size: 10px;
+      line-height: 1.6;
       color: #777;
     }
 
-    .comments-status {
-      margin-top: 12px;
-      font-size: 12px;
-      color: #777;
-      font-style: italic;
-    }
-
-    .approved-comments {
-      margin-top: 45px;
-    }
-
-    .approved-comments h4 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 25px;
-      font-weight: 500;
-      color: #5E6F5A;
-      margin-bottom: 15px;
-    }
-
-    .approved-comments p {
-      font-size: 13px;
-      color: #777;
-      line-height: 1.7;
-    }
-
-    /* =========================
-       RODAPÉ
-    ========================== */
+    /* RODAPÉ */
 
     footer {
       background: #5E6F5A;
@@ -346,9 +301,7 @@
       opacity: 0.8;
     }
 
-    /* =========================
-       CELULAR
-    ========================== */
+    /* CELULAR */
 
     @media (max-width: 600px) {
 
@@ -387,99 +340,19 @@
       }
 
       .comments {
-        margin-top: 55px;
-      }
-
-      .comments h3 {
-        font-size: 30px;
+        max-width: 300px;
+        margin-top: 30px;
+        padding-top: 15px;
       }
 
     }
 
-/* COMENTÁRIOS - VERSÃO MINIMALISTA */
-
-.comments {
-  max-width: 380px;
-  margin: 35px auto 0;
-  padding-top: 18px;
-}
-
-.comments h3 {
-  font-size: 24px;
-  margin-bottom: 12px;
-}
-
-.comment-form {
-  gap: 6px;
-}
-
-.comment-form label {
-  font-size: 11px;
-}
-
-.comment-form input,
-.comment-form textarea {
-  padding: 8px 10px;
-  font-size: 12px;
-}
-
-.comment-form input {
-  height: 34px;
-}
-
-.comment-form textarea {
-  min-height: 60px;
-  height: 60px;
-}
-
-.comment-form button {
-  margin-top: 4px;
-  padding: 8px 16px;
-  font-size: 11px;
-}
-
-.comments-note {
-  margin-top: 10px;
-  font-size: 10px;
-}
-
-.comments-status {
-  margin-top: 6px;
-  font-size: 10px;
-}
-
-.approved-comments {
-  margin-top: 18px;
-}
-
-.approved-comments h4 {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.approved-comments p {
-  font-size: 11px;
-}
-
-/* CELULAR */
-
-@media (max-width: 600px) {
-  .comments {
-    max-width: 300px;
-    margin-top: 30px;
-    padding-top: 15px;
-  }
-}
-    
   </style>
-
 </head>
 
 <body>
 
-  <!-- =========================
-       MENU
-  ========================== -->
+  <!-- MENU -->
 
   <header class="top-menu">
 
@@ -502,10 +375,7 @@
 
   </header>
 
-
-  <!-- =========================
-       ABERTURA
-  ========================== -->
+  <!-- ABERTURA -->
 
   <header class="page-header">
 
@@ -521,21 +391,146 @@
 
   </header>
 
-
   <main>
 
-    <!-- =========================
-         CAPÍTULO 01
-         DELTA DO PARNAÍBA
-    ========================== -->
+    <!-- CAPÍTULO 01 - MARATONA DE SÃO PAULO -->
 
-    <article class="chapter" id="delta-parnaiba">
-
+    <article class="chapter" id="maratona-sp">
       <div class="chapter-inner">
 
-        <div class="chapter-number">
-          Capítulo 01
+        <div class="chapter-number">Capítulo 01</div>
+
+        <h2>Maratona Internacional de SP</h2>
+
+        <div class="chapter-meta">
+          42 km · São Paulo - SP · 08/2011
         </div>
+
+        <img
+          class="chapter-image"
+          src="maratona-sp.jpg"
+          alt="Maratona Internacional de São Paulo"
+        >
+
+        <div class="chapter-text">
+          <p class="chapter-placeholder">
+            Um conto a ser escrito.
+          </p>
+        </div>
+
+        <section class="comments" aria-label="Comentários da Maratona de São Paulo">
+
+          <h3>Curtiu?</h3>
+
+          <form class="comment-form" data-chapter="maratona-sp">
+
+            <label for="nome-sp">Nome</label>
+            <input
+              id="nome-sp"
+              name="nome"
+              type="text"
+              maxlength="80"
+              placeholder="Seu nome"
+              required
+              disabled
+            >
+
+            <label for="comentario-sp">Comentário</label>
+            <textarea
+              id="comentario-sp"
+              name="comentario"
+              maxlength="2000"
+              placeholder="Escreva seu comentário..."
+              required
+              disabled
+            ></textarea>
+
+            <button type="submit" disabled>Enviar</button>
+
+          </form>
+
+          <p class="comments-note">
+            Publicado somente após aprovação.
+          </p>
+
+        </section>
+
+      </div>
+    </article>
+
+
+    <!-- CAPÍTULO 02 - TWO OCEANS -->
+
+    <article class="chapter" id="two-oceans">
+      <div class="chapter-inner">
+
+        <div class="chapter-number">Capítulo 02</div>
+
+        <h2>Two Oceans</h2>
+
+        <div class="chapter-meta">
+          56 km · Cape Town - África do Sul · 04/2014
+        </div>
+
+        <img
+          class="chapter-image"
+          src="two-oceans.jpg"
+          alt="Two Oceans em Cape Town"
+        >
+
+        <div class="chapter-text">
+          <p class="chapter-placeholder">
+            Um conto a ser escrito.
+          </p>
+        </div>
+
+        <section class="comments" aria-label="Comentários da Two Oceans">
+
+          <h3>Curtiu?</h3>
+
+          <form class="comment-form" data-chapter="two-oceans">
+
+            <label for="nome-two-oceans">Nome</label>
+            <input
+              id="nome-two-oceans"
+              name="nome"
+              type="text"
+              maxlength="80"
+              placeholder="Seu nome"
+              required
+              disabled
+            >
+
+            <label for="comentario-two-oceans">Comentário</label>
+            <textarea
+              id="comentario-two-oceans"
+              name="comentario"
+              maxlength="2000"
+              placeholder="Escreva seu comentário..."
+              required
+              disabled
+            ></textarea>
+
+            <button type="submit" disabled>Enviar</button>
+
+          </form>
+
+          <p class="comments-note">
+            Publicado somente após aprovação.
+          </p>
+
+        </section>
+
+      </div>
+    </article>
+
+
+    <!-- CAPÍTULO 03 - DELTA DO PARNAÍBA -->
+
+    <article class="chapter" id="delta-parnaiba">
+      <div class="chapter-inner">
+
+        <div class="chapter-number">Capítulo 03</div>
 
         <h2>Delta do Parnaíba</h2>
 
@@ -550,14 +545,10 @@
         >
 
         <div class="chapter-text">
-
           <p class="chapter-placeholder">
             Um conto a ser escrito.
           </p>
-
         </div>
-
-        <!-- COMENTÁRIOS DO DELTA -->
 
         <section class="comments" aria-label="Comentários do Delta do Parnaíba">
 
@@ -566,7 +557,6 @@
           <form class="comment-form" data-chapter="delta-parnaiba">
 
             <label for="nome-delta">Nome</label>
-
             <input
               id="nome-delta"
               name="nome"
@@ -578,45 +568,35 @@
             >
 
             <label for="comentario-delta">Comentário</label>
-
             <textarea
               id="comentario-delta"
               name="comentario"
               maxlength="2000"
-              placeholder="Escreva sua impressão sobre o conto..."
+              placeholder="Escreva seu comentário..."
               required
               disabled
             ></textarea>
 
-            <button type="submit" disabled>
-              Enviar comentário
-            </button>
+            <button type="submit" disabled>Enviar</button>
 
           </form>
 
           <p class="comments-note">
-            Os comentários serão publicados somente após aprovação.
+            Publicado somente após aprovação.
           </p>
 
-         </section>
+        </section>
 
       </div>
-
     </article>
 
 
-    <!-- =========================
-         CAPÍTULO 02
-         SAARA
-    ========================== -->
+    <!-- CAPÍTULO 04 - SAARA -->
 
     <article class="chapter" id="saara">
-
       <div class="chapter-inner">
 
-        <div class="chapter-number">
-          Capítulo 02
-        </div>
+        <div class="chapter-number">Capítulo 04</div>
 
         <h2>Deserto do Saara</h2>
 
@@ -631,14 +611,10 @@
         >
 
         <div class="chapter-text">
-
           <p class="chapter-placeholder">
             Um conto a ser escrito.
           </p>
-
         </div>
-
-        <!-- COMENTÁRIOS DO SAARA -->
 
         <section class="comments" aria-label="Comentários do Saara">
 
@@ -647,7 +623,6 @@
           <form class="comment-form" data-chapter="saara">
 
             <label for="nome-saara">Nome</label>
-
             <input
               id="nome-saara"
               name="nome"
@@ -659,45 +634,35 @@
             >
 
             <label for="comentario-saara">Comentário</label>
-
             <textarea
               id="comentario-saara"
               name="comentario"
               maxlength="2000"
-              placeholder="Escreva sua impressão sobre o conto..."
+              placeholder="Escreva seu comentário..."
               required
               disabled
             ></textarea>
 
-            <button type="submit" disabled>
-              Enviar comentário
-            </button>
+            <button type="submit" disabled>Enviar</button>
 
           </form>
 
           <p class="comments-note">
-            Os comentários serão publicados somente após aprovação.
+            Publicado somente após aprovação.
           </p>
 
-          </section>
+        </section>
 
       </div>
-
     </article>
 
 
-    <!-- =========================
-         CAPÍTULO 03
-         LA MISION
-    ========================== -->
+    <!-- CAPÍTULO 05 - LA MISION -->
 
     <article class="chapter" id="la-mision">
-
       <div class="chapter-inner">
 
-        <div class="chapter-number">
-          Capítulo 03
-        </div>
+        <div class="chapter-number">Capítulo 05</div>
 
         <h2>La Mision</h2>
 
@@ -712,14 +677,10 @@
         >
 
         <div class="chapter-text">
-
           <p class="chapter-placeholder">
             Um conto a ser escrito.
           </p>
-
         </div>
-
-        <!-- COMENTÁRIOS DA LA MISION -->
 
         <section class="comments" aria-label="Comentários da La Mision">
 
@@ -728,7 +689,6 @@
           <form class="comment-form" data-chapter="la-mision">
 
             <label for="nome-mision">Nome</label>
-
             <input
               id="nome-mision"
               name="nome"
@@ -740,53 +700,38 @@
             >
 
             <label for="comentario-mision">Comentário</label>
-
             <textarea
               id="comentario-mision"
               name="comentario"
               maxlength="2000"
-              placeholder="Escreva sua impressão sobre o conto..."
+              placeholder="Escreva seu comentário..."
               required
               disabled
             ></textarea>
 
-            <button type="submit" disabled>
-              Enviar comentário
-            </button>
+            <button type="submit" disabled>Enviar</button>
 
           </form>
 
           <p class="comments-note">
-            Os comentários serão publicados somente após aprovação.
+            Publicado somente após aprovação.
           </p>
-                 
+
         </section>
 
       </div>
-
     </article>
 
   </main>
 
-
-  <!-- =========================
-       RODAPÉ
-  ========================== -->
+  <!-- RODAPÉ -->
 
   <footer>
-
     BORALINE
-
-    <span>
-      correr com coração
-    </span>
-
+    <span>correr com coração</span>
   </footer>
 
-
-  <!-- =========================
-       MENU
-  ========================== -->
+  <!-- MENU -->
 
   <script>
 
@@ -814,3 +759,5 @@
 
 </body>
 </html>
+
+   
