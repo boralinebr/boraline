@@ -4,21 +4,12 @@
 
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Capítulos | Boraline</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap"
@@ -40,56 +31,127 @@
     }
 
     body {
-      background: #F8F7F4;
+      background: #FAF9F6;
       color: #2E2E2E;
-      font-family: "Inter", sans-serif;
+      font-family: "Cormorant Garamond", serif;
     }
 
-    /* MENU */
+    /* CABEÇALHO - MESMO PADRÃO DO ÁLBUM */
+
+    .page-header {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 42px 50px 28px;
+      position: relative;
+      text-align: center;
+    }
+
+    .header-brand {
+      position: absolute;
+      left: 50px;
+      top: 46px;
+      z-index: 20;
+
+      color: #56634B;
+      text-decoration: none;
+
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 4px;
+    }
+
+    .eyebrow {
+      font-family: "Inter", sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 14px;
+      color: #2E2E2E;
+    }
+
+    .page-intro p {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 17px;
+      line-height: 1.5;
+      color: #555;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* MENU - MESMO PADRÃO DO ÁLBUM */
 
     .top-menu {
-      position: relative;
-      z-index: 20;
-    }
-
-    .menu-button {
-      position: fixed;
-      top: 28px;
-      right: 28px;
-      width: 46px;
-      height: 40px;
-      border: 0;
-      background: transparent;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 9px;
-      z-index: 22;
-    }
-
-    .menu-button span {
-      display: block;
-      width: 38px;
-      height: 1px;
-      background: #5E6F5A;
-    }
-
-    .menu-links {
       position: fixed;
       top: 0;
       right: 0;
+      width: 0;
+      height: 0;
+      z-index: 9999;
+    }
+
+    .menu-button {
+      position: fixed !important;
+      top: 28px;
+      right: 28px;
+
+      width: 46px;
+      height: 40px;
+
+      padding: 0;
+      margin: 0;
+
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      z-index: 10001;
+    }
+
+    .menu-button span {
+      display: block !important;
+      width: 38px;
+      height: 1px;
+      min-height: 1px;
+      background-color: #5E6F5A;
+    }
+
+    .menu-links {
+      position: fixed !important;
+      top: 0;
+      right: 0;
+
       width: 280px;
       height: 100vh;
-      background: #F8F7F4;
+
       padding: 110px 35px;
-      display: flex;
+      background: #F8F7F4;
+
+      display: flex !important;
       flex-direction: column;
+      align-items: flex-start;
       gap: 28px;
+
       transform: translateX(100%);
       transition: transform 0.35s ease;
-      z-index: 21;
-      box-shadow: -8px 0 30px rgba(0,0,0,0.06);
+
+      z-index: 10000;
     }
 
     .menu-links.open {
@@ -97,43 +159,14 @@
     }
 
     .menu-links a {
+      display: block;
+
       font-family: "Cormorant Garamond", serif;
       font-size: 25px;
+      line-height: 1.2;
+
       color: #5E6F5A;
       text-decoration: none;
-    }
-
-    /* ABERTURA */
-
-    .page-header {
-      padding: 115px 24px 90px;
-      text-align: center;
-    }
-
-    .eyebrow {
-      color: #5E6F5A;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 6px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
-    .page-header h1 {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 70px;
-      font-weight: 500;
-      color: #5E6F5A;
-      line-height: 1;
-      margin-bottom: 24px;
-    }
-
-    .page-header p {
-      max-width: 680px;
-      margin: 0 auto;
-      font-size: 17px;
-      line-height: 1.8;
-      color: #555;
     }
 
     /* CAPÍTULOS */
@@ -155,9 +188,12 @@
     .chapter-number {
       text-align: center;
       color: #5E6F5A;
+
+      font-family: "Inter", sans-serif;
       font-size: 12px;
       letter-spacing: 5px;
       text-transform: uppercase;
+
       margin-bottom: 20px;
     }
 
@@ -166,14 +202,17 @@
       font-size: 54px;
       font-weight: 500;
       line-height: 1.1;
+
       color: #5E6F5A;
       text-align: center;
       margin-bottom: 16px;
     }
 
     .chapter-meta {
+      font-family: "Inter", sans-serif;
       font-size: 13px;
       line-height: 1.6;
+
       color: #777;
       text-align: center;
       margin-bottom: 42px;
@@ -206,7 +245,7 @@
       color: #777 !important;
     }
 
-    /* COMENTÁRIOS COMPACTOS */
+    /* COMENTÁRIOS - VERSÃO COMPACTA */
 
     .comments {
       max-width: 380px;
@@ -230,6 +269,7 @@
     }
 
     .comment-form label {
+      font-family: "Inter", sans-serif;
       font-size: 11px;
       font-weight: 500;
       color: #5E6F5A;
@@ -239,9 +279,11 @@
     .comment-form textarea {
       width: 100%;
       padding: 8px 10px;
+
       border: 1px solid #D5D2CB;
       background: #FFFFFF;
       border-radius: 2px;
+
       font-family: "Inter", sans-serif;
       font-size: 12px;
       color: #343434;
@@ -261,9 +303,11 @@
       align-self: flex-start;
       margin-top: 4px;
       padding: 8px 16px;
+
       border: 0;
       background: #5E6F5A;
       color: #FFFFFF;
+
       font-family: "Inter", sans-serif;
       font-size: 11px;
       letter-spacing: 1px;
@@ -277,28 +321,51 @@
 
     .comments-note {
       margin-top: 10px;
+
+      font-family: "Inter", sans-serif;
       font-size: 10px;
       line-height: 1.6;
       color: #777;
     }
 
-    /* RODAPÉ */
+    /* RODAPÉ - MESMO PADRÃO DO ÁLBUM */
 
     footer {
-      background: #5E6F5A;
-      color: #F8F7F4;
+      max-width: 1300px;
+      margin: 0 auto;
+
+      padding: 22px 30px 35px;
+      border-top: 1px solid #D8D5CF;
+
       text-align: center;
-      padding: 48px 24px;
-      letter-spacing: 4px;
-      font-size: 14px;
+      color: #4E5947;
+
+      font-size: 15px;
+      letter-spacing: 5px;
     }
 
     footer span {
       display: block;
-      margin-top: 10px;
-      font-size: 12px;
-      letter-spacing: 3px;
-      opacity: 0.8;
+      margin-top: 4px;
+
+      color: #555;
+      font-size: 13px;
+      font-style: italic;
+      letter-spacing: 1px;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 900px) {
+
+      .page-header {
+        padding-top: 100px;
+      }
+
+      .header-brand {
+        left: 25px;
+      }
+
     }
 
     /* CELULAR */
@@ -306,15 +373,36 @@
     @media (max-width: 600px) {
 
       .page-header {
-        padding: 105px 22px 70px;
+        padding: 105px 20px 25px;
+      }
+
+      .header-brand {
+        left: 20px;
+        top: 28px;
+        font-size: 18px;
+      }
+
+      .menu-button {
+        top: 20px;
+        right: 20px;
+      }
+
+      .menu-links {
+        width: 260px;
+        padding: 100px 30px;
+      }
+
+      .eyebrow {
+        font-size: 9px;
+        letter-spacing: 4px;
       }
 
       .page-header h1 {
-        font-size: 52px;
+        font-size: 42px;
       }
 
-      .page-header p {
-        font-size: 15px;
+      .page-intro p {
+        font-size: 16px;
       }
 
       .chapter {
@@ -347,90 +435,78 @@
 
     }
 
-/* BORALINE NO CANTO SUPERIOR ESQUERDO */
-
-.header-brand {
-  position: absolute;
-  top: 35px;
-  left: 40px;
-  z-index: 20;
-
-  font-family: "Cormorant Garamond", serif;
-  font-size: 26px;
-  font-weight: 500;
-  letter-spacing: 3px;
-
-  color: #5E6F5A;
-  text-decoration: none;
-}
-
-/* AJUSTE PARA CELULAR */
-
-@media (max-width: 600px) {
-  .header-brand {
-    top: 34px;
-    left: 20px;
-    font-size: 22px;
-    letter-spacing: 2px;
-  }
-}
-
   </style>
+
 </head>
 
 <body>
 
   <!-- MENU -->
 
-  <header class="top-menu">
-    
- <a href="index.html" class="header-brand">
-    BORALINE
-  </a>
-    
+  <div class="top-menu">
+
     <button
+      type="button"
       class="menu-button"
       id="menuButton"
       aria-label="Abrir menu"
       aria-expanded="false"
+      aria-controls="menuLinks"
     >
       <span></span>
       <span></span>
     </button>
 
     <nav class="menu-links" id="menuLinks">
+
       <a href="index.html">início</a>
+
       <a href="brasil.html">experiências Brasil</a>
+
       <a href="exterior.html">experiências Exterior</a>
+
       <a href="capitulos.html">capítulos</a>
+
     </nav>
 
-  </header>
+  </div>
 
-  <!-- ABERTURA -->
+  <!-- CABEÇALHO -->
 
   <header class="page-header">
 
-    <div class="eyebrow">
-      BORALINE · CAPÍTULOS
+    <a href="index.html" class="header-brand">
+      BORALINE
+    </a>
+
+    <div class="page-intro">
+
+      <div class="eyebrow">
+        BORALINE · CAPÍTULOS
+      </div>
+
+      <h1>O coração</h1>
+
+      <p>
+        Em forma de contos, trago aqui aquelas que
+        aqueceram meu coração e me trouxeram de volta ao lar.
+      </p>
+
     </div>
-
-    <h1>O coração</h1>
-
-    <p>
-      Em forma de contos, trago aqui aquelas experiências que aqueceram meu coração e me trouxeram de volta ao lar.
-    </p>
 
   </header>
 
   <main>
 
-    <!-- CAPÍTULO 01 - MARATONA DE SÃO PAULO -->
+    <!-- CAPÍTULO 01 -->
 
     <article class="chapter" id="maratona-sp">
+
       <div class="chapter-inner">
 
-        <div class="chapter-number">Capítulo 01</div>
+        <div class="chapter-number">
+          Capítulo 01
+        </div>
 
         <h2>Maratona Internacional de SP</h2>
 
@@ -450,13 +526,14 @@
           </p>
         </div>
 
-        <section class="comments" aria-label="Comentários da Maratona de São Paulo">
+        <section class="comments">
 
           <h3>Curtiu?</h3>
 
           <form class="comment-form" data-chapter="maratona-sp">
 
             <label for="nome-sp">Nome</label>
+
             <input
               id="nome-sp"
               name="nome"
@@ -468,6 +545,7 @@
             >
 
             <label for="comentario-sp">Comentário</label>
+
             <textarea
               id="comentario-sp"
               name="comentario"
@@ -477,7 +555,9 @@
               disabled
             ></textarea>
 
-            <button type="submit" disabled>Enviar</button>
+            <button type="submit" disabled>
+              Enviar
+            </button>
 
           </form>
 
@@ -488,15 +568,18 @@
         </section>
 
       </div>
+
     </article>
 
-
-    <!-- CAPÍTULO 02 - TWO OCEANS -->
+    <!-- CAPÍTULO 02 -->
 
     <article class="chapter" id="two-oceans">
+
       <div class="chapter-inner">
 
-        <div class="chapter-number">Capítulo 02</div>
+        <div class="chapter-number">
+          Capítulo 02
+        </div>
 
         <h2>Two Oceans</h2>
 
@@ -516,13 +599,14 @@
           </p>
         </div>
 
-        <section class="comments" aria-label="Comentários da Two Oceans">
+        <section class="comments">
 
           <h3>Curtiu?</h3>
 
           <form class="comment-form" data-chapter="two-oceans">
 
             <label for="nome-two-oceans">Nome</label>
+
             <input
               id="nome-two-oceans"
               name="nome"
@@ -534,6 +618,7 @@
             >
 
             <label for="comentario-two-oceans">Comentário</label>
+
             <textarea
               id="comentario-two-oceans"
               name="comentario"
@@ -543,7 +628,9 @@
               disabled
             ></textarea>
 
-            <button type="submit" disabled>Enviar</button>
+            <button type="submit" disabled>
+              Enviar
+            </button>
 
           </form>
 
@@ -554,15 +641,18 @@
         </section>
 
       </div>
+
     </article>
 
-
-    <!-- CAPÍTULO 03 - DELTA DO PARNAÍBA -->
+    <!-- CAPÍTULO 03 -->
 
     <article class="chapter" id="delta-parnaiba">
+
       <div class="chapter-inner">
 
-        <div class="chapter-number">Capítulo 03</div>
+        <div class="chapter-number">
+          Capítulo 03
+        </div>
 
         <h2>Delta do Parnaíba</h2>
 
@@ -582,13 +672,14 @@
           </p>
         </div>
 
-        <section class="comments" aria-label="Comentários do Delta do Parnaíba">
+        <section class="comments">
 
           <h3>Curtiu?</h3>
 
           <form class="comment-form" data-chapter="delta-parnaiba">
 
             <label for="nome-delta">Nome</label>
+
             <input
               id="nome-delta"
               name="nome"
@@ -600,6 +691,7 @@
             >
 
             <label for="comentario-delta">Comentário</label>
+
             <textarea
               id="comentario-delta"
               name="comentario"
@@ -609,7 +701,9 @@
               disabled
             ></textarea>
 
-            <button type="submit" disabled>Enviar</button>
+            <button type="submit" disabled>
+              Enviar
+            </button>
 
           </form>
 
@@ -620,15 +714,18 @@
         </section>
 
       </div>
+
     </article>
 
-
-    <!-- CAPÍTULO 04 - SAARA -->
+    <!-- CAPÍTULO 04 -->
 
     <article class="chapter" id="saara">
+
       <div class="chapter-inner">
 
-        <div class="chapter-number">Capítulo 04</div>
+        <div class="chapter-number">
+          Capítulo 04
+        </div>
 
         <h2>Deserto do Saara</h2>
 
@@ -648,13 +745,14 @@
           </p>
         </div>
 
-        <section class="comments" aria-label="Comentários do Saara">
+        <section class="comments">
 
           <h3>Curtiu?</h3>
 
           <form class="comment-form" data-chapter="saara">
 
             <label for="nome-saara">Nome</label>
+
             <input
               id="nome-saara"
               name="nome"
@@ -666,6 +764,7 @@
             >
 
             <label for="comentario-saara">Comentário</label>
+
             <textarea
               id="comentario-saara"
               name="comentario"
@@ -675,7 +774,9 @@
               disabled
             ></textarea>
 
-            <button type="submit" disabled>Enviar</button>
+            <button type="submit" disabled>
+              Enviar
+            </button>
 
           </form>
 
@@ -686,15 +787,18 @@
         </section>
 
       </div>
+
     </article>
 
-
-    <!-- CAPÍTULO 05 - LA MISION -->
+    <!-- CAPÍTULO 05 -->
 
     <article class="chapter" id="la-mision">
+
       <div class="chapter-inner">
 
-        <div class="chapter-number">Capítulo 05</div>
+        <div class="chapter-number">
+          Capítulo 05
+        </div>
 
         <h2>La Mision</h2>
 
@@ -714,13 +818,14 @@
           </p>
         </div>
 
-        <section class="comments" aria-label="Comentários da La Mision">
+        <section class="comments">
 
           <h3>Curtiu?</h3>
 
           <form class="comment-form" data-chapter="la-mision">
 
             <label for="nome-mision">Nome</label>
+
             <input
               id="nome-mision"
               name="nome"
@@ -732,6 +837,7 @@
             >
 
             <label for="comentario-mision">Comentário</label>
+
             <textarea
               id="comentario-mision"
               name="comentario"
@@ -741,7 +847,9 @@
               disabled
             ></textarea>
 
-            <button type="submit" disabled>Enviar</button>
+            <button type="submit" disabled>
+              Enviar
+            </button>
 
           </form>
 
@@ -752,6 +860,7 @@
         </section>
 
       </div>
+
     </article>
 
   </main>
@@ -759,11 +868,16 @@
   <!-- RODAPÉ -->
 
   <footer>
+
     BORALINE
-    <span>correr com coração</span>
+
+    <span>
+      correr com coração
+    </span>
+
   </footer>
 
-  <!-- MENU -->
+  <!-- MENU ABRIR / FECHAR -->
 
   <script>
 
@@ -791,5 +905,3 @@
 
 </body>
 </html>
-
-   
